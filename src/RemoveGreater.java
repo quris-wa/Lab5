@@ -1,4 +1,4 @@
-public class Add extends Command{
+public class RemoveGreater extends Command{
     @Override
     public void execute(){
 
