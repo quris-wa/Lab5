@@ -16,11 +16,14 @@ public class Main {
             str = S.split(",");
             Person chelovek = new Person(str);
             persons.add(chelovek);
-
         }
+        HashMap<String, Command> commandList;
+        commandList = CommandHelper.getCommandMap();
         Scanner scanner = new Scanner(System.in);
         String command = scanner.nextLine();
+        commandList.get(command).execute();
 
-        scanner.close();
+
+       // scanner.close();
     }
 }

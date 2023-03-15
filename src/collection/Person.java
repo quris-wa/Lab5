@@ -3,10 +3,7 @@ package collection;
 import collection.Coordinates;
 import collection.Location;
 
-import java.text.DateFormat;
-import java.text.ParsePosition;
-import java.text.SimpleDateFormat;
-import java.time.chrono.ChronoLocalDate;
+import java.text.*;
 import java.util.*;
 
 
@@ -27,13 +24,14 @@ public class Person implements Comparable{
         coordinates = new Coordinates(Double.parseDouble(str1[1]),Integer.parseInt(str1[2]));
         creationDate = new Date();
         height = Double.parseDouble(str1[3]);
+        //Random randomPassID = new Random(new Date().getTime());
+        //UUID uid = UUID.randomUUID();
+        //passportID = uid.toString();
         SimpleDateFormat df = new SimpleDateFormat("dd.mm.yyyy");
         birthday = df.parse(str1[4], new ParsePosition(0));
-        Random randomPassID = new Random(new Date().getTime());
-        UUID uid = UUID.randomUUID();
-        passportID = uid.toString();
-        eyeColor = Color.valueOf(str1[5]);
-        location = new Location(Double.parseDouble(str1[6]),Float.parseFloat(str1[7]),Double.parseDouble(str1[8]),str1[9]);
+        passportID = str1[5];
+        eyeColor = Color.valueOf(str1[6]);
+        location = new Location(Double.parseDouble(str1[7]),Float.parseFloat(str1[8]),Double.parseDouble(str1[9]),str1[10]);
     }
 
     @Override
