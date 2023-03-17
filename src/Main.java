@@ -9,13 +9,12 @@ public class Main {
         Scanner scan = new Scanner(reader);
         String[] str = new String[1001];
         String S;
-        Queue<Person> persons = new java.util.PriorityQueue<Person>();
 
         while (scan.hasNextLine()) {
             S = scan.nextLine();
             str = S.split(",");
             Person chelovek = new Person(str);
-            persons.add(chelovek);
+            PersonHelper.getPersons().add(chelovek);
         }
         HashMap<String, Command> commandList;
         commandList = CommandHelper.getCommandMap();
@@ -23,7 +22,6 @@ public class Main {
         String command = scanner.nextLine();
         commandList.get(command).execute();
 
-
-       // scanner.close();
     }
+
 }
