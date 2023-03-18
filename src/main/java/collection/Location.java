@@ -11,4 +11,16 @@ public class Location {
         this.z = z;
         this.name = name;
     }
+    public String getName(){
+        return name;
+    }
+    public Double getX(){
+        return x;
+    }
+    public float getY(){
+        return y;
+    }
+    public Double getZ(){
+        return z;
+    }
 }

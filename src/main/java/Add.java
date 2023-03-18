@@ -106,6 +106,6 @@ public class Add extends Command {
             for (int i = 8; i <= 10; i++) parametrs[i] = "";
         }
         Person chelovek = new Person(parametrs);
-        PersonHelper.getPersons().add(chelovek);
+        PersonHelper.getCollection().add(chelovek);
     }
 }

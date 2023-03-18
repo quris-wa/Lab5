@@ -17,10 +17,12 @@ public class Person implements Comparable {
     private String passportID; //Длина строки должна быть не меньше 9, Длина строки не должна быть больше 26, Поле может быть null
     private Color eyeColor; //Поле может быть null
     private Location location; //Поле может быть null
+    public Person(){
 
+    }
     public Person(String[] str1) {
         Random randomID = new Random(new Date().getTime());
-        id = randomID.nextInt();
+        id = Math.abs(randomID.nextInt());
         name = str1[0];
         coordinates = new Coordinates(Double.parseDouble(str1[1]), Integer.parseInt(str1[2]));
         creationDate = new Date();
@@ -46,8 +48,41 @@ public class Person implements Comparable {
     public Date getCreationDate() {
         return creationDate;
     }
+
     @Override
     public int compareTo(Object o) {
         return 0;
+    }
+
+    @Override
+    public String toString() {
+        String output;
+        output = "ID : " + id + ", имя: " + name + ", координаты: (" + coordinates.getX() + ", " + coordinates.getY()
+                + "), дата создания: " + creationDate;
+        if (height != null) {
+            output += ", рост: " + height.toString();
+        }
+        if (birthday != null) {
+            output += ", дата рождения: " + birthday.toString();
+        }
+        if (passportID != null) {
+            output += ", ID паспорта: " + passportID;
+        }
+        if (eyeColor != null) {
+            output += ", цвет глаз: " + eyeColor;
+        }
+        if (location != null) {
+            if (location.getName() != null)
+                output += ", локация " + location.getName();
+            output += ", координаты локации: (" + location.getX() + ", " + location.getY() + ", " + location.getZ() + ")";
+        }
+        output += ";";
+        return output;
+    }
+    public int getId(){
+        return id;
+    }
+    public void changeName(String newName){
+        name = newName;
     }
 }

@@ -14,7 +14,7 @@ public class Main {
             S = scan.nextLine();
             str = S.split(",");
             Person chelovek = new Person(str);
-            PersonHelper.getPersons().add(chelovek);
+            PersonHelper.getCollection().add(chelovek);
         }
         UserManager.scanCommand();
 

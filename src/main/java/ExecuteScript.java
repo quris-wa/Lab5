@@ -3,10 +3,7 @@ import collection.Person;
 import java.util.*;
 import java.io.*;
 public class ExecuteScript extends Command{
-    String pathToFile;
     HashMap<String, Command> commandList = CommandHelper.getCommandMap();
-
-
     @Override
     public void execute() throws Exception{
         String argument = UserManager.argument;
@@ -18,8 +15,6 @@ public class ExecuteScript extends Command{
             String commandLine = scanner.nextLine().trim();
             String[] input = commandLine.split(" ");
             while (input.length == 0 || input.length > 2) {
-                //System.out.println("Неверный формат ввода команды!");
-                //System.out.println("Введите команду: ");
                 commandLine = scanner.nextLine().trim();
                 input = commandLine.split(" ");
             }
@@ -30,9 +25,5 @@ public class ExecuteScript extends Command{
             }
             commandList.get(command).execute();
         }
-    }
-    @Override
-    public void setArgument(String argument){
-        pathToFile = argument;
     }
 }
