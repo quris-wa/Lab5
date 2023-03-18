@@ -16,8 +16,9 @@ public class Main {
             Person chelovek = new Person(str);
             PersonHelper.getCollection().add(chelovek);
         }
-        UserManager.scanCommand();
-
+        while(true) {
+            UserManager.scanCommand();
+        }
     }
 
 }

@@ -85,4 +85,36 @@ public class Person implements Comparable {
     public void changeName(String newName){
         name = newName;
     }
+    public void changeX(String newX){
+        coordinates = new Coordinates(Double.parseDouble(newX), coordinates.getY());
+    }
+    public void changeY(String newY){
+        coordinates = new Coordinates(coordinates.getX(), Integer.parseInt(newY));
+    }
+    public void changeHeight(String newHeight){
+        height = Double.parseDouble(newHeight);
+    }
+    public void changeBirthday(String newBirthday){
+        SimpleDateFormat df = new SimpleDateFormat("dd.mm.yyyy");
+        birthday = df.parse(newBirthday, new ParsePosition(0));
+    }
+    public void changePassportID(String newPassportID){
+        passportID = newPassportID;
+    }
+    public void changeEyeColor(String newEyeColor){
+        eyeColor = Color.valueOf(newEyeColor);
+    }
+    public void changeLocX(String newLocX){
+        location = new Location(Double.parseDouble(newLocX), location.getY(), location.getZ(), location.getName());
+    }
+    public void changeLocY(String newLocY){
+        location = new Location(location.getX(), Float.parseFloat(newLocY), location.getZ(), location.getName());
+    }
+    public void changeLocZ(String newLocZ){
+        location = new Location(location.getX(), location.getY(), Double.parseDouble(newLocZ), location.getName());
+    }
+    public void changeLocName(String newLocName){
+        location = new Location(location.getX(), location.getY(), location.getZ(), newLocName);
+    }
+
 }
