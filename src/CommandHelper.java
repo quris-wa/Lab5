@@ -2,7 +2,7 @@
 import java.util.HashMap;
 
 public class CommandHelper {
-    static HashMap<String, Command> commandList = new HashMap<>();
+    static private HashMap<String, Command> commandList = new HashMap<>();
     static {
         commandList.put("help", new Help());
         commandList.put("info", new Info());

@@ -16,11 +16,7 @@ public class Main {
             Person chelovek = new Person(str);
             PersonHelper.getPersons().add(chelovek);
         }
-        HashMap<String, Command> commandList;
-        commandList = CommandHelper.getCommandMap();
-        Scanner scanner = new Scanner(System.in);
-        String command = scanner.nextLine();
-        commandList.get(command).execute();
+
 
     }
 

@@ -1,3 +1,3 @@
 public interface CommandInterface {
-    void execute();
+    void execute() throws Exception;
 }
