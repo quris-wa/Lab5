@@ -5,7 +5,7 @@ import java.util.*;
 
 public class Main {
     public static void main(String[] args) throws Exception {
-        FileReader reader = new FileReader("/Users/aebuir/IdeaProjects/Lab5/src/Data.csv");
+        FileReader reader = new FileReader("/Users/aebuir/IdeaProjects/Lab5/src/main/java/Data.csv");
         Scanner scan = new Scanner(reader);
         String[] str = new String[1001];
         String S;
@@ -16,7 +16,7 @@ public class Main {
             Person chelovek = new Person(str);
             PersonHelper.getPersons().add(chelovek);
         }
-
+        UserManager.scanCommand();
 
     }
 

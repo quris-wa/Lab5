@@ -43,6 +43,9 @@ public class Person implements Comparable {
         else return true;
     }
 
+    public Date getCreationDate() {
+        return creationDate;
+    }
     @Override
     public int compareTo(Object o) {
         return 0;

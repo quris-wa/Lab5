@@ -7,4 +7,10 @@ public class PersonHelper {
     public static Queue<Person> getPersons() {
         return persons;
     }
+    public static Queue<Person> getCollection(){
+        return persons;
+    }
+    public static java.util.Date getCreationDate(){
+        return persons.stream().findFirst().get().getCreationDate();
+    }
 }

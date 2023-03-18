@@ -18,17 +18,17 @@ public class ExecuteScript extends Command{
             String commandLine = scanner.nextLine().trim();
             String[] input = commandLine.split(" ");
             while (input.length == 0 || input.length > 2) {
-                System.out.println("Неверный формат ввода команды!");
-                System.out.println("Введите команду: ");
+                //System.out.println("Неверный формат ввода команды!");
+                //System.out.println("Введите команду: ");
                 commandLine = scanner.nextLine().trim();
                 input = commandLine.split(" ");
-                String command = input[0];
-                if (input.length == 2) {
-                    argument = input[1];
-                    commandList.get(command).setArgument(argument);
-                }
-                commandList.get(command).execute();
             }
+            String command = input[0];
+            if (input.length == 2) {
+                argument = input[1];
+                commandList.get(command).setArgument(argument);
+            }
+            commandList.get(command).execute();
         }
     }
     @Override
