@@ -9,7 +9,7 @@ public class CommandHelper {
         commandList.put("show", new Show());
         commandList.put("add", new Add());
         commandList.put("update", new UpdateByID());
-        commandList.put("remove_by_id", new RemoveByID());
+        commandList.put("remove", new RemoveByID());
         commandList.put("clear", new Clear());
         commandList.put("save", new Save());
         commandList.put("execute_script", new ExecuteScript());

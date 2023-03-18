@@ -1,4 +1,5 @@
 import collection.Person;
+import org.w3c.dom.ls.LSOutput;
 
 import java.util.Scanner;
 
@@ -102,6 +103,7 @@ public class UpdateByID extends Command {
                 System.out.println("Введите имя локации: ");
                 String nameLoc = scanner.nextLine();
                 if (!nameLoc.equals("")) person.changeLocName(nameLoc);
+                System.out.println("Значения данных человека с ID " + findId + " были обновлены");
             }
         }
     }
