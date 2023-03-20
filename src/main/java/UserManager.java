@@ -6,7 +6,7 @@ import java.util.*;
 
 public class UserManager{
     static String argument;
-
+    public static boolean isWorking = true;
     public static void scanCommand() throws Exception {
         HashMap<String, Command> commandList;
         commandList = CommandHelper.getCommandMap();
@@ -25,8 +25,12 @@ public class UserManager{
             argument = input[1];
             commandList.get(command).setArgument(argument);
         }
-        commandList.get(command).execute();
-
+        try {
+            commandList.get(command).execute();
+        }
+        catch(NullPointerException e){
+            System.out.println("Такой команды нет!");
+        }
     }
 
 

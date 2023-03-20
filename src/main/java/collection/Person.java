@@ -17,9 +17,11 @@ public class Person implements Comparable {
     private String passportID; //Длина строки должна быть не меньше 9, Длина строки не должна быть больше 26, Поле может быть null
     private Color eyeColor; //Поле может быть null
     private Location location; //Поле может быть null
-    public Person(){
+
+    public Person() {
 
     }
+
     public Person(String[] str1) {
         Random randomID = new Random(new Date().getTime());
         id = Math.abs(randomID.nextInt());
@@ -45,8 +47,40 @@ public class Person implements Comparable {
         else return true;
     }
 
+    public int getID() {
+        return id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public Coordinates getCoordinates() {
+        return coordinates;
+    }
+
     public Date getCreationDate() {
         return creationDate;
+    }
+
+    public Double getHeight() {
+        return height;
+    }
+
+    public Date getBirthday() {
+        return birthday;
+    }
+
+    public String getPassportID() {
+        return passportID;
+    }
+
+    public Color getEyeColor() {
+        return eyeColor;
+    }
+
+    public Location getLocation() {
+        return location;
     }
 
     @Override
@@ -79,41 +113,53 @@ public class Person implements Comparable {
         output += ";";
         return output;
     }
-    public int getId(){
+
+    public int getId() {
         return id;
     }
-    public void changeName(String newName){
+
+    public void changeName(String newName) {
         name = newName;
     }
-    public void changeX(String newX){
+
+    public void changeX(String newX) {
         coordinates = new Coordinates(Double.parseDouble(newX), coordinates.getY());
     }
-    public void changeY(String newY){
+
+    public void changeY(String newY) {
         coordinates = new Coordinates(coordinates.getX(), Integer.parseInt(newY));
     }
-    public void changeHeight(String newHeight){
+
+    public void changeHeight(String newHeight) {
         height = Double.parseDouble(newHeight);
     }
-    public void changeBirthday(String newBirthday){
+
+    public void changeBirthday(String newBirthday) {
         SimpleDateFormat df = new SimpleDateFormat("dd.mm.yyyy");
         birthday = df.parse(newBirthday, new ParsePosition(0));
     }
-    public void changePassportID(String newPassportID){
+
+    public void changePassportID(String newPassportID) {
         passportID = newPassportID;
     }
-    public void changeEyeColor(String newEyeColor){
+
+    public void changeEyeColor(String newEyeColor) {
         eyeColor = Color.valueOf(newEyeColor);
     }
-    public void changeLocX(String newLocX){
+
+    public void changeLocX(String newLocX) {
         location = new Location(Double.parseDouble(newLocX), location.getY(), location.getZ(), location.getName());
     }
-    public void changeLocY(String newLocY){
+
+    public void changeLocY(String newLocY) {
         location = new Location(location.getX(), Float.parseFloat(newLocY), location.getZ(), location.getName());
     }
-    public void changeLocZ(String newLocZ){
+
+    public void changeLocZ(String newLocZ) {
         location = new Location(location.getX(), location.getY(), Double.parseDouble(newLocZ), location.getName());
     }
-    public void changeLocName(String newLocName){
+
+    public void changeLocName(String newLocName) {
         location = new Location(location.getX(), location.getY(), location.getZ(), newLocName);
     }
 
