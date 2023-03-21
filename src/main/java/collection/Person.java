@@ -21,7 +21,6 @@ public class Person implements Comparable {
     public Person() {
 
     }
-
     public Person(String[] str1) {
         Random randomID = new Random(new Date().getTime());
         id = Math.abs(randomID.nextInt());
