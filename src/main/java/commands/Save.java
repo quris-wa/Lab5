@@ -1,5 +1,8 @@
-import collection.Person;
+package commands;
 
+import collection.Person;
+import commandManagers.*;
+import personManagers.*;
 import java.io.*;
 
 public class Save extends Command {

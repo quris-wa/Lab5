@@ -1,4 +1,8 @@
+package commands;
+
 import collection.Person;
+import commandManagers.*;
+import personManagers.*;
 
 public class RemoveByPassportID extends Command {
     boolean isFound = false;

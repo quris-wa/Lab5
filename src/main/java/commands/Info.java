@@ -1,3 +1,8 @@
+package commands;
+
+import commandManagers.*;
+import personManagers.*;
+
 public class Info extends Command {
     @Override
     public void execute() {

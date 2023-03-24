@@ -1,3 +1,5 @@
+package commandManagers;
+
 import collection.Color;
 
 import java.text.*;

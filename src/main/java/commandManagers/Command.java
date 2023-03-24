@@ -1,3 +1,5 @@
+package commandManagers;
+
 public abstract class Command implements CommandInterface {
     public String name;
     public String argument;

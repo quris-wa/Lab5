@@ -1,5 +1,8 @@
-import collection.Person;
+package commands;
 
+import collection.*;
+import commandManagers.*;
+import personManagers.*;
 import java.util.Scanner;
 
 public class Add extends Command {

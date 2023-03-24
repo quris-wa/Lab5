@@ -1,4 +1,8 @@
+package commands;
+
 import collection.Person;
+import commandManagers.*;
+import personManagers.*;
 
 import java.util.*;
 

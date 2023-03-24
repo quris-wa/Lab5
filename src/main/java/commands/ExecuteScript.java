@@ -1,5 +1,10 @@
+package commands;
+
 import java.util.*;
 import java.io.*;
+import collection.*;
+import commandManagers.*;
+import userManagers.*;
 
 public class ExecuteScript extends Command {
     HashMap<String, Command> commandList = CommandHelper.getCommandMap();

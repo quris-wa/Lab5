@@ -1,3 +1,7 @@
+package commandManagers;
+
+import commandManagers.Command;
+import commands.*;
 
 import java.util.HashMap;
 

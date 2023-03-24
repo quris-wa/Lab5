@@ -1,8 +1,13 @@
+package userManagers;
+
+import commandManagers.Command;
+import commandManagers.CommandHelper;
+
 import java.util.HashMap;
 import java.util.*;
 
 public class UserManager {
-    static String argument;
+    public static String argument;
     public static boolean isWorking = true;
 
     public static void scanCommand() throws Exception {

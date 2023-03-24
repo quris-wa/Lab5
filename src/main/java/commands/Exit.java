@@ -1,3 +1,8 @@
+package commands;
+
+import commandManagers.*;
+import userManagers.*;
+
 public class Exit extends Command {
     @Override
     public void execute() {

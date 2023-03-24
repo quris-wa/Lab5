@@ -1,4 +1,8 @@
+package commands;
+
 import collection.Person;
+import commandManagers.*;
+import personManagers.*;
 
 public class Show extends Command {
     @Override

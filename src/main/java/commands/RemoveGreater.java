@@ -1,3 +1,7 @@
+package commands;
+import commandManagers.*;
+import personManagers.*;
+
 public class RemoveGreater extends Command {
     @Override
     public void execute() {

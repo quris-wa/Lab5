@@ -1,3 +1,7 @@
+package commands;
+
+import commandManagers.*;
+
 public class Help extends Command {
     @Override
     public void execute() {

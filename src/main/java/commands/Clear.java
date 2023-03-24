@@ -1,4 +1,8 @@
-import collection.Person;
+package commands;
+
+import collection.*;
+import commandManagers.*;
+import personManagers.*;
 
 public class Clear extends Command {
     @Override
