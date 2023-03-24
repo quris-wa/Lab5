@@ -1,5 +1,4 @@
 import collection.Person;
-import org.w3c.dom.ls.LSOutput;
 
 import java.util.Scanner;
 
@@ -82,7 +81,7 @@ public class UpdateByID extends Command {
                     System.out.println("Введите координату X локации:");
                     xLocStr = scanner.nextLine();
                 }
-                if(!xLocStr.equals(""))person.changeLocX(xLocStr);
+                if (!xLocStr.equals("")) person.changeLocX(xLocStr);
 
                 System.out.println("Введите координату Y локации:");
                 String yLocStr = scanner.nextLine();
@@ -90,7 +89,7 @@ public class UpdateByID extends Command {
                     System.out.println("Введите координату Y локации:");
                     yLocStr = scanner.nextLine();
                 }
-                if(!yLocStr.equals(""))person.changeLocY(yLocStr);
+                if (!yLocStr.equals("")) person.changeLocY(yLocStr);
 
                 System.out.println("Введите координату Z локации:");
                 String zLocStr = scanner.nextLine();
@@ -98,7 +97,7 @@ public class UpdateByID extends Command {
                     System.out.println("Введите координату Z локации:");
                     zLocStr = scanner.nextLine();
                 }
-                if(!zLocStr.equals(""))person.changeLocZ(zLocStr);
+                if (!zLocStr.equals("")) person.changeLocZ(zLocStr);
 
                 System.out.println("Введите имя локации: ");
                 String nameLoc = scanner.nextLine();

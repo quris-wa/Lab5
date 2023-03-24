@@ -1,7 +1,5 @@
 import collection.Person;
 
-import java.util.Queue;
-
 public class RemoveByPassportID extends Command {
     boolean isFound = false;
     Person person = new Person();

@@ -1,13 +1,9 @@
 import collection.Person;
 
-import java.io.FileReader;
-import java.text.ParsePosition;
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Add extends Command {
-    String parametrs[] = new String[12];
+    String personParametrs[] = new String[12];
 
     @Override
     public void execute() {
@@ -19,7 +15,7 @@ public class Add extends Command {
             System.out.println("Введите имя: ");
             namePerson = scanner.nextLine();
         }
-        parametrs[0] = namePerson;
+        personParametrs[0] = namePerson;
 
 
         System.out.println("Введите координату X в типе данных Double(больше -866): ");
@@ -28,7 +24,7 @@ public class Add extends Command {
             System.out.println("Введите координату X в типе данных Double(больше -866): ");
             xStr = scanner.nextLine();
         }
-        parametrs[1] = xStr;
+        personParametrs[1] = xStr;
 
 
         System.out.println("Введите координату Y в типе данных Integer(больше -512): ");
@@ -37,7 +33,7 @@ public class Add extends Command {
             System.out.println("Введите координату Y в типе данных Integer(больше -512): ");
             yStr = scanner.nextLine();
         }
-        parametrs[2] = yStr;
+        personParametrs[2] = yStr;
 
 
         System.out.println("Введите рост в см: ");
@@ -46,7 +42,7 @@ public class Add extends Command {
             System.out.println("Введите рост в см(больше 0): ");
             heightStr = scanner.nextLine();
         }
-        parametrs[3] = heightStr;
+        personParametrs[3] = heightStr;
 
 
         System.out.println("Введите дату рождения: ");
@@ -55,7 +51,7 @@ public class Add extends Command {
             System.out.println("Введите дату рождения: ");
             birthday = scanner.nextLine();
         }
-        parametrs[4] = birthday;
+        personParametrs[4] = birthday;
 
         System.out.println("Введите ID паспорта: ");
         String passportID = scanner.nextLine();
@@ -63,7 +59,7 @@ public class Add extends Command {
             System.out.println("Введите ID паспорта: ");
             passportID = scanner.nextLine();
         }
-        parametrs[5] = passportID;
+        personParametrs[5] = passportID;
 
         System.out.println("Введите цвет глаз(BLACK, YELLOW, ORANGE): ");
         String eyeColor = scanner.nextLine();
@@ -71,7 +67,7 @@ public class Add extends Command {
             System.out.println("Введите цвет глаз(BLACK, YELLOW, ORANGE): ");
             eyeColor = scanner.nextLine();
         }
-        parametrs[6] = eyeColor;
+        personParametrs[6] = eyeColor;
 
 
         System.out.println("Введите координату X локации:");
@@ -80,7 +76,7 @@ public class Add extends Command {
             System.out.println("Введите координату X локации:");
             xLocStr = scanner.nextLine();
         }
-        parametrs[7] = xLocStr;
+        personParametrs[7] = xLocStr;
 
         if (!xLocStr.equals("")) {
             System.out.println("Введите координату Y локации:");
@@ -89,7 +85,7 @@ public class Add extends Command {
                 System.out.println("Введите координату Y локации:");
                 yLocStr = scanner.nextLine();
             }
-            parametrs[8] = yLocStr;
+            personParametrs[8] = yLocStr;
 
             System.out.println("Введите координату Z локации:");
             String zLocStr = scanner.nextLine();
@@ -97,15 +93,15 @@ public class Add extends Command {
                 System.out.println("Введите координату Z локации:");
                 zLocStr = scanner.nextLine();
             }
-            parametrs[9] = zLocStr;
+            personParametrs[9] = zLocStr;
 
             System.out.println("Введите имя локации: ");
             String nameLoc = scanner.nextLine();
-            parametrs[10] = nameLoc;
+            personParametrs[10] = nameLoc;
         } else {
-            for (int i = 8; i <= 10; i++) parametrs[i] = "";
+            for (int i = 8; i <= 10; i++) personParametrs[i] = "";
         }
-        Person chelovek = new Person(parametrs);
+        Person chelovek = new Person(personParametrs);
         PersonHelper.getCollection().add(chelovek);
     }
 }

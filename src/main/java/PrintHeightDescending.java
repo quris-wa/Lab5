@@ -1,4 +1,3 @@
-import collection.Color;
 import collection.Person;
 
 import java.util.*;

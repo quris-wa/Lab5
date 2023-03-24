@@ -65,11 +65,10 @@ public class CheckCommand {
         Date date;
         SimpleDateFormat df = new SimpleDateFormat("dd.mm.yyyy");
         date = df.parse(argument, new ParsePosition(0));
-        if (date == null){
+        if (date == null) {
             System.out.println("Дата должна быть в формате ДД.ММ.ГГГГ");
             return false;
-        }
-        else return true;
+        } else return true;
 
     }
 

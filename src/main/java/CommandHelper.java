@@ -2,7 +2,8 @@
 import java.util.HashMap;
 
 public class CommandHelper {
-    static private HashMap<String, Command> commands = new HashMap<>();
+    static private final HashMap<String, Command> commands = new HashMap<>();
+
     static {
         commands.put("help", new Help());
         commands.put("info", new Info());
@@ -21,6 +22,7 @@ public class CommandHelper {
         commands.put("max_by_birthday", new MaxByBirthday());
         commands.put("print_field_descending_height", new PrintHeightDescending());
     }
+
     public static HashMap<String, Command> getCommandMap() {
         return commands;
     }

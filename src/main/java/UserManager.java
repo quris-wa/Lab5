@@ -1,12 +1,10 @@
-import collection.Person;
-
-import java.io.*;
 import java.util.HashMap;
 import java.util.*;
 
-public class UserManager{
+public class UserManager {
     static String argument;
     public static boolean isWorking = true;
+
     public static void scanCommand() throws Exception {
         HashMap<String, Command> commandList;
         commandList = CommandHelper.getCommandMap();
@@ -27,8 +25,7 @@ public class UserManager{
         }
         try {
             commandList.get(command).execute();
-        }
-        catch(NullPointerException e){
+        } catch (NullPointerException e) {
             System.out.println("Такой команды нет!");
         }
     }

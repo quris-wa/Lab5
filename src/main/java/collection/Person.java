@@ -1,8 +1,5 @@
 package collection;
 
-import collection.Coordinates;
-import collection.Location;
-
 import java.text.*;
 import java.util.*;
 
@@ -21,6 +18,7 @@ public class Person implements Comparable {
     public Person() {
 
     }
+
     public Person(String[] str1) {
         Random randomID = new Random(new Date().getTime());
         id = Math.abs(randomID.nextInt());
@@ -42,20 +40,7 @@ public class Person implements Comparable {
     }
 
     public boolean notNull(String argument) {
-        if (argument.equals("")) return false;
-        else return true;
-    }
-
-    public int getID() {
-        return id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public Coordinates getCoordinates() {
-        return coordinates;
+        return !argument.equals("");
     }
 
     public Date getCreationDate() {
@@ -74,14 +59,6 @@ public class Person implements Comparable {
         return passportID;
     }
 
-    public Color getEyeColor() {
-        return eyeColor;
-    }
-
-    public Location getLocation() {
-        return location;
-    }
-
     @Override
     public int compareTo(Object o) {
         return 0;
@@ -93,10 +70,10 @@ public class Person implements Comparable {
         output = "ID : " + id + ", имя: " + name + ", координаты: (" + coordinates.getX() + ", " + coordinates.getY()
                 + "), дата создания: " + creationDate;
         if (height != null) {
-            output += ", рост: " + height.toString();
+            output += ", рост: " + height;
         }
         if (birthday != null) {
-            output += ", дата рождения: " + birthday.toString();
+            output += ", дата рождения: " + birthday;
         }
         if (passportID != null) {
             output += ", ID паспорта: " + passportID;
@@ -134,7 +111,7 @@ public class Person implements Comparable {
     }
 
     public void changeBirthday(String newBirthday) {
-        SimpleDateFormat df = new SimpleDateFormat("dd.mm.yyyy");
+        SimpleDateFormat df = new SimpleDateFormat("dd.MM.yyyy");
         birthday = df.parse(newBirthday, new ParsePosition(0));
     }
 

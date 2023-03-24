@@ -1,6 +1,6 @@
 public class Help extends Command {
     @Override
-    public void execute(){
+    public void execute() {
         System.out.println("info: вывести в стандартный поток вывода информации о коллекции(тип, дата инициализации, количество элементов и т.д.)");
         System.out.println("show: вывести в стандартный поток вывода все элементы коллекции в строковом представлении");
         System.out.println("add {element}: добавить новый элемент в коллекцию");

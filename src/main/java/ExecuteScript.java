@@ -1,16 +1,14 @@
-import collection.Person;
-
 import java.util.*;
 import java.io.*;
-public class ExecuteScript extends Command{
+
+public class ExecuteScript extends Command {
     HashMap<String, Command> commandList = CommandHelper.getCommandMap();
+
     @Override
-    public void execute() throws Exception{
+    public void execute() throws Exception {
         String argument = UserManager.argument;
         FileReader reader = new FileReader(argument);
         Scanner scanner = new Scanner(reader);
-        String[] str = new String[1001];
-        String S;
         while (scanner.hasNextLine()) {
             String commandLine = scanner.nextLine().trim();
             String[] input = commandLine.split(" ");

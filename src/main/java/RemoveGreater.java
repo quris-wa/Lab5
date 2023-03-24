@@ -1,14 +1,9 @@
-import collection.*;
-
-import java.util.*;
-
 public class RemoveGreater extends Command {
     @Override
     public void execute() {
         if (PersonHelper.getCollection().size() == 0) {
             System.out.println("Коллекция пустая");
         } else {
-            List<Double> heights = new ArrayList<>();
             try {
                 Double currentHeight = Double.parseDouble(argument);
                 PersonHelper.getCollection().removeIf(person -> (person.getHeight() > currentHeight));

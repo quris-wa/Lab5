@@ -7,7 +7,7 @@ public class Main {
     public static void main(String[] args) throws Exception {
         FileReader reader = new FileReader("/Users/aebuir/IdeaProjects/Lab5/src/main/java/Data.csv");
         Scanner scan = new Scanner(reader);
-        String[] str = new String[1001];
+        String[] str;
         String S;
 
         while (scan.hasNextLine()) {
@@ -16,7 +16,7 @@ public class Main {
             Person chelovek = new Person(str);
             PersonHelper.getCollection().add(chelovek);
         }
-        while(UserManager.isWorking){
+        while (UserManager.isWorking) {
             UserManager.scanCommand();
         }
     }
