@@ -9,10 +9,7 @@ public class RemoveFirst extends Command {
         if (PersonHelper.getCollection().size() == 0) {
             System.out.println("Коллекция пустая");
         } else {
-            Queue<Person> persons;
-            persons = PersonHelper.getCollection();
-            persons.remove(persons.element());
-            PersonHelper.changeCollection(persons);
+            PersonHelper.getCollection().remove(PersonHelper.getCollection().element());
             System.out.println("Первый человек в коллекции был удален!");
         }
     }
