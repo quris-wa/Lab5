@@ -29,7 +29,7 @@ public class Person implements Comparable {
         creationDate = new Date();
         if (notNull(str1[3])) height = Double.parseDouble(str1[3]);
         if (notNull(str1[4])) {
-            SimpleDateFormat df = new SimpleDateFormat("dd.mm.yyyy");
+            SimpleDateFormat df = new SimpleDateFormat("dd.MM.yyyy");
             birthday = df.parse(str1[4], new ParsePosition(0));
         }
         if (notNull(str1[5])) passportID = str1[5];
