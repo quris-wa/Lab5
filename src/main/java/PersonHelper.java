@@ -10,4 +10,7 @@ public class PersonHelper {
     public static java.util.Date getCreationDate(){
         return persons.stream().findFirst().get().getCreationDate();
     }
+    public static void changeCollection(Queue<Person> newPersons){
+        persons = newPersons;
+    }
 }

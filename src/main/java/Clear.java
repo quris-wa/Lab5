@@ -1,9 +1,13 @@
 import collection.Person;
 
-public class Clear extends Command{
+public class Clear extends Command {
     @Override
-    public void execute(){
-        PersonHelper.getCollection().clear();
-        System.out.println("Коллекция была очищена.");
+    public void execute() {
+        if (PersonHelper.getCollection().size() == 0) {
+            System.out.println("Коллекция пустая");
+        } else {
+            PersonHelper.getCollection().clear();
+            System.out.println("Коллекция была очищена.");
+        }
     }
 }
