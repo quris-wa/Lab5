@@ -21,6 +21,6 @@ public class Save extends Command {
         } catch (IOException e) {
             System.out.println(e.getMessage());
         }
-        System.out.println("Коллекция сохранена в файл Saved_data.csv");
+        System.out.println("Коллекция сохранена в файл Saved_data.txt");
     }
 }

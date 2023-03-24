@@ -13,7 +13,7 @@ public class Help extends Command {
         System.out.println("remove_first: удалить первый элемент из коллекции");
         System.out.println("head: вывести первый элемент из коллекции");
         System.out.println("remove_greater {element}: удалить все элементы из коллекции, превышающие заданный");
-        System.out.println("remove_any_pasport_i_d passportID: удалить из коллекции один элемент, значение поля passportID которого эквивалентно заданному");
+        System.out.println("remove_any_by_passport_i_d passportID: удалить из коллекции один элемент, значение поля passportID которого эквивалентно заданному");
         System.out.println("max_by_birthday: вывести любой объект из коллекции,значение поля birthday которого является максимальным");
         System.out.println("print_field_descending_height: вывести значения поля height всех элементов в порядке убывания");
     }
