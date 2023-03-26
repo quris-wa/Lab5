@@ -3,17 +3,18 @@ package commands;
 import collection.Person;
 import commandManagers.*;
 import personManagers.*;
+import userManagers.UserManager;
 
 public class RemoveByID extends Command {
-    boolean isFound = false;
-    Person person = new Person();
+    private boolean isFound = false;
+    private Person person = new Person();
 
     @Override
     public void execute() {
         if (PersonHelper.getCollection().size() == 0) {
             System.out.println("Коллекция пустая");
         } else {
-            int findId = Integer.parseInt(argument);
+            int findId = Integer.parseInt(UserManager.getCommandArgument());
             for (Person chelovek : PersonHelper.getCollection()) {
                 int id = chelovek.getId();
                 if (findId == id) {
@@ -28,5 +29,9 @@ public class RemoveByID extends Command {
                 System.out.println("Человек с ID " + findId + " был удален");
             }
         }
+    }
+    @Override
+    public String getName(){
+        return "remove_by_id";
     }
 }

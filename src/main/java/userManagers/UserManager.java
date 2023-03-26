@@ -7,12 +7,13 @@ import java.util.HashMap;
 import java.util.*;
 
 public class UserManager {
-    public static String argument;
-    public static boolean isWorking = true;
+    private static String commandArgument;
+    private static boolean isWorking = true;
+    static boolean isCommandArgument = false;
 
     public static void scanCommand() throws Exception {
         HashMap<String, Command> commandList;
-        commandList = CommandHelper.getCommandMap();
+        commandList = CommandHelper.getCommands();
         Scanner scanner = new Scanner(System.in);
         System.out.println("Введите команду: ");
         String commandLine = scanner.nextLine().trim();
@@ -24,9 +25,11 @@ public class UserManager {
             input = commandLine.split(" ");
         }
         String command = input[0];
+        isCommandArgument = false;
         if (input.length == 2) {
-            argument = input[1];
-            commandList.get(command).setArgument(argument);
+            commandArgument = input[1].trim();
+            isCommandArgument = true;
+            commandList.get(command).setArgument(commandArgument);
         }
         try {
             commandList.get(command).execute();
@@ -34,6 +37,19 @@ public class UserManager {
             System.out.println("Такой команды нет!");
         }
     }
-
-
+    public static String getCommandArgument(){
+        return commandArgument;
+    }
+    public static boolean getIsCommandArgument(){
+        return isCommandArgument;
+    }
+    public static boolean getIsWorking(){
+        return isWorking;
+    }
+    public static void setIsWorking(boolean status){
+        isWorking = status;
+    }
+    public static void setIsCommandArgument(boolean status){
+        isCommandArgument = status;
+    }
 }

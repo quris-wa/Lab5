@@ -2,14 +2,23 @@ package commands;
 
 import commandManagers.*;
 import personManagers.*;
+import userManagers.UserManager;
 
 public class Head extends Command {
     @Override
     public void execute() {
-        if (PersonHelper.getCollection().size() == 0) {
-            System.out.println("Коллекция пустая");
+        if (UserManager.getIsCommandArgument()) {
+            System.out.println("У команды не должно быть аргумента!");
         } else {
-            System.out.println(PersonHelper.getCollection().element().toString());
+            if (PersonHelper.getCollection().size() == 0) {
+                System.out.println("Коллекция пустая");
+            } else {
+                System.out.println(PersonHelper.getCollection().element().toString());
+            }
         }
+    }
+    @Override
+    public String getName(){
+        return "exit";
     }
 }

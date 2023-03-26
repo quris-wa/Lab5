@@ -3,25 +3,32 @@ package commands;
 import collection.*;
 import commandManagers.*;
 import personManagers.*;
+import userManagers.UserManager;
 
 import java.util.*;
 
 
 public class MaxByBirthday extends Command {
-    Date maxBirthday;
-    Person chelovek = new Person();
 
     @Override
     public void execute() {
-        maxBirthday = PersonHelper.getCollection().element().getBirthday();
-        chelovek = PersonHelper.getCollection().element();
-        for (Person person : PersonHelper.getCollection()) {
-            if (person.getBirthday().after(maxBirthday)) {
-                maxBirthday = person.getBirthday();
-                chelovek = person;
+        if (UserManager.getIsCommandArgument()) {
+            System.out.println("У команды не должно быть аргумента!");
+        } else {
+            Date maxBirthday = PersonHelper.getCollection().element().getBirthday();
+            Person chelovek = PersonHelper.getCollection().element();
+            for (Person person : PersonHelper.getCollection()) {
+                if (person.getBirthday().after(maxBirthday)) {
+                    maxBirthday = person.getBirthday();
+                    chelovek = person;
+                }
             }
+            System.out.println(chelovek.toString());
         }
-        System.out.println(chelovek.toString());
 
+    }
+    @Override
+    public String getName(){
+        return "max_by_birthday";
     }
 }

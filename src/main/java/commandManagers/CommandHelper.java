@@ -1,13 +1,13 @@
 package commandManagers;
 
-import commandManagers.Command;
 import commands.*;
 
 import java.util.HashMap;
+import java.util.LinkedHashSet;
 
 public class CommandHelper {
     static private final HashMap<String, Command> commands = new HashMap<>();
-
+    static private LinkedHashSet<String> skriptsPath = new LinkedHashSet<>();
     static {
         commands.put("help", new Help());
         commands.put("info", new Info());
@@ -27,7 +27,10 @@ public class CommandHelper {
         commands.put("print_field_descending_height", new PrintHeightDescending());
     }
 
-    public static HashMap<String, Command> getCommandMap() {
+    public static HashMap<String, Command> getCommands() {
         return commands;
+    }
+    public static LinkedHashSet<String> getSkriptsPath(){
+        return skriptsPath;
     }
 }

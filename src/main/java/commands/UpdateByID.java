@@ -3,6 +3,8 @@ package commands;
 import collection.Person;
 import commandManagers.*;
 import personManagers.*;
+import userManagers.UserManager;
+
 import java.util.Scanner;
 
 public class UpdateByID extends Command {
@@ -15,7 +17,7 @@ public class UpdateByID extends Command {
             } else {
                 Person person = new Person();
                 boolean isFound = false;
-                int findId = Integer.parseInt(argument);
+                int findId = Integer.parseInt(UserManager.getCommandArgument());
                 for (Person chelovek : PersonHelper.getCollection()) {
                     int id = chelovek.getId();
                     if (findId == id) {
@@ -109,9 +111,13 @@ public class UpdateByID extends Command {
                     System.out.println("Значения данных человека с ID " + findId + " были обновлены");
                 }
             }
-        }catch(java.lang.NumberFormatException e){
+        } catch (java.lang.NumberFormatException e) {
             System.out.println("Неверный формат ID!");
         }
+    }
+    @Override
+    public String getName(){
+        return "update";
     }
 
 }

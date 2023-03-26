@@ -3,17 +3,18 @@ package commands;
 import collection.Person;
 import commandManagers.*;
 import personManagers.*;
+import userManagers.UserManager;
 
 public class RemoveByPassportID extends Command {
-    boolean isFound = false;
-    Person person = new Person();
+    private boolean isFound = false;
+    private Person person = new Person();
 
     @Override
     public void execute() {
         if (PersonHelper.getCollection().size() == 0) {
             System.out.println("Коллекция пустая");
         } else {
-            String findId = argument;
+            String findId = UserManager.getCommandArgument();
             for (Person chelovek : PersonHelper.getCollection()) {
                 String passportID = chelovek.getPassportID();
                 if (findId.equals(passportID)) {
@@ -29,5 +30,9 @@ public class RemoveByPassportID extends Command {
 
             }
         }
+    }
+    @Override
+    public String getName(){
+        return "remove_any_by_passport_i_d";
     }
 }

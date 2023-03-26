@@ -1,6 +1,7 @@
 package commandManagers;
 
 import collection.Color;
+import userManagers.UserManager;
 
 import java.text.*;
 import java.util.Date;
@@ -123,7 +124,7 @@ public class CheckCommand {
     }
 
     public static boolean checkValueLocZ(String argument) {
-        if (argument.equals("")) {
+        if (UserManager.getCommandArgument().equals("")) {
             System.out.println("Значение не должно быть пустым!");
             return false;
         }

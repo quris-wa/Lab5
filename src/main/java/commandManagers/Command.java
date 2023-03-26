@@ -1,12 +1,13 @@
 package commandManagers;
 
 public abstract class Command implements CommandInterface {
-    public String name;
-    public String argument;
+    private String name;
 
     public abstract void execute() throws Exception;
 
     public void setArgument(String argument) {
-        this.argument = argument;
+    }
+    public String getName(){
+        return name;
     }
 }
