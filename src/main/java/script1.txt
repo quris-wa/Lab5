@@ -1,2 +1,2 @@
 info
-execute_script /Users/aebuir/IdeaProjects/Lab5/src/main/java/script2.txt
+execute_script src/main/java/script2.txt

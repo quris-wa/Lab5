@@ -1,2 +1,2 @@
 show
-execute_script /Users/aebuir/IdeaProjects/Lab5/src/main/java/script1.txt
+src/main/java/script1.txt
