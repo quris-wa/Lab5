@@ -12,7 +12,7 @@ public class Add extends Command {
 
     @Override
     public void execute() {
-        if (!UserManager.getCommandArgument().equals("")) {
+        if (UserManager.getIsCommandArgument()) {
             System.out.println("У команды не должно быть аргумента!");
         } else {
             Scanner scanner = new Scanner(System.in);
