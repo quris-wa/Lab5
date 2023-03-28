@@ -6,17 +6,16 @@ import commandManagers.*;
 import userManagers.*;
 
 public class ExecuteScript extends Command {
+    String commandArgument;
     @Override
     public void execute() throws Exception {
         try {
             if (CommandHelper.getSkriptsPath().contains(UserManager.getCommandArgument()) && getName().equals("execute_script")) {
-                System.out.println("Обнаружена рекурсия! Выполнение остановлено");
+                System.out.println("Обнаружена рекурсия!");
                 CommandHelper.getSkriptsPath().clear();
             } else {
                 CommandHelper.getSkriptsPath().add(UserManager.getCommandArgument());
-
-                String argument = UserManager.getCommandArgument();
-                FileReader reader = new FileReader(argument);
+                FileReader reader = new FileReader(UserManager.getCommandArgument());
                 Scanner scanner = new Scanner(reader);
                 while (scanner.hasNextLine()) {
                     String commandLine = scanner.nextLine().trim();
@@ -28,12 +27,14 @@ public class ExecuteScript extends Command {
                     String command = input[0];
                     UserManager.setIsCommandArgument(false);
                     if (input.length == 2) {
-                        argument = input[1];
+                        commandArgument = input[1];
                         UserManager.setIsCommandArgument(true);
-                        CommandHelper.getCommands().get(command).setArgument(argument);
+                        UserManager.setCommandArgument(commandArgument);
+                        CommandHelper.getCommands().get(command).setArgument(commandArgument);
                     }
                     CommandHelper.getCommands().get(command).execute();
                 }
+                System.out.println("Скрипт " + UserManager.getCommandArgument() + " выполнен");
             }
         }
         catch (java.io.FileNotFoundException e){

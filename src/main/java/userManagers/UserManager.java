@@ -43,6 +43,9 @@ public class UserManager {
     public static boolean getIsCommandArgument(){
         return isCommandArgument;
     }
+    public static void setCommandArgument(String newCommandArgument){
+        commandArgument = newCommandArgument;
+    }
     public static boolean getIsWorking(){
         return isWorking;
     }
