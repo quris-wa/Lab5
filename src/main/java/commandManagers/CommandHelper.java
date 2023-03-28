@@ -2,12 +2,13 @@ package commandManagers;
 
 import commands.*;
 
+import java.util.ArrayDeque;
+import java.util.Deque;
 import java.util.HashMap;
-import java.util.LinkedHashSet;
 
 public class CommandHelper {
     static private final HashMap<String, Command> commands = new HashMap<>();
-    static private LinkedHashSet<String> skriptsPath = new LinkedHashSet<>();
+    static private Deque<String> scriptsPath = new ArrayDeque<>();
     static {
         commands.put("help", new Help());
         commands.put("info", new Info());
@@ -30,7 +31,7 @@ public class CommandHelper {
     public static HashMap<String, Command> getCommands() {
         return commands;
     }
-    public static LinkedHashSet<String> getSkriptsPath(){
-        return skriptsPath;
+    public static Deque<String> getScriptsPath(){
+        return scriptsPath;
     }
 }
