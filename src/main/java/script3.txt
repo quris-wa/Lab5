@@ -1,2 +1,2 @@
 show
-src/main/java/script1.txt
+script1.txt

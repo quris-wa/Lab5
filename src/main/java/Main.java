@@ -7,7 +7,7 @@ import java.util.*;
 
 public class Main {
     public static void main(String[] args) throws Exception {
-        FileReader reader = new FileReader("src/main/java/Data.csv");
+        FileReader reader = new FileReader("Data.csv");
         Scanner scan = new Scanner(reader);
         String[] str;
         String S;
