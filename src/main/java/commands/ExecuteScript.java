@@ -2,11 +2,13 @@ package commands;
 
 import java.util.*;
 import java.io.*;
+
 import commandManagers.*;
 import userManagers.*;
 
 public class ExecuteScript extends Command {
     String commandArgument;
+
     @Override
     public void execute() throws Exception {
         try {
@@ -39,17 +41,18 @@ public class ExecuteScript extends Command {
                 }
                 System.out.println("Скрипт " + scriptsPathCopy.pollLast() + " выполнен");
             }
-        }
-        catch (java.io.FileNotFoundException e){
+        } catch (java.io.FileNotFoundException e) {
             System.out.println("Файл с названием " + UserManager.getCommandArgument() + " не найден");
         }
     }
+
     @Override
-    public String getName(){
+    public String getName() {
         return "execute_script";
     }
+
     @Override
-    public String getDescription(){
+    public String getDescription() {
         return ": cчитать и исполнить скрипт из указанного файла. " +
                 "В скрипте содержатся команды в таком же виде, в котором их вводит пользователь в интерактивном режиме";
     }

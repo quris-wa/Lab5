@@ -20,12 +20,14 @@ public class Show extends Command {
             }
         }
     }
+
     @Override
-    public String getName(){
+    public String getName() {
         return "show";
     }
+
     @Override
-    public String getDescription(){
+    public String getDescription() {
         return ": вывести в стандартный поток вывода все элементы коллекции в строковом представлении";
     }
 }

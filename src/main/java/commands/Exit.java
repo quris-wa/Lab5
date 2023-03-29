@@ -13,12 +13,14 @@ public class Exit extends Command {
             System.out.println("Завершение программы.");
         }
     }
+
     @Override
-    public String getName(){
+    public String getName() {
         return "exit";
     }
+
     @Override
-    public String getDescription(){
+    public String getDescription() {
         return ": завершить программу (без сохранения в файл)";
     }
 }

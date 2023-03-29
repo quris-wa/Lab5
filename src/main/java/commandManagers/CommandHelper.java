@@ -9,6 +9,7 @@ import java.util.HashMap;
 public class CommandHelper {
     static private final HashMap<String, Command> commands = new HashMap<>();
     static private Deque<String> scriptsPath = new ArrayDeque<>();
+
     static {
         commands.put("help", new Help());
         commands.put("info", new Info());
@@ -31,7 +32,8 @@ public class CommandHelper {
     public static HashMap<String, Command> getCommands() {
         return commands;
     }
-    public static Deque<String> getScriptsPath(){
+
+    public static Deque<String> getScriptsPath() {
         return scriptsPath;
     }
 }

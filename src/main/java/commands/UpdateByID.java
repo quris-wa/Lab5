@@ -115,12 +115,14 @@ public class UpdateByID extends Command {
             System.out.println("Неверный формат ID!");
         }
     }
+
     @Override
-    public String getName(){
+    public String getName() {
         return "update";
     }
+
     @Override
-    public String getDescription(){
+    public String getDescription() {
         return ": обновить значение элемента коллекции, id которого равен заданному";
     }
 }

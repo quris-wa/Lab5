@@ -12,8 +12,7 @@ public class Save extends Command {
     public void execute() throws IOException {
         if (UserManager.getIsCommandArgument()) {
             System.out.println("У команды не должно быть аргумента!");
-        }
-        else {
+        } else {
             try (FileOutputStream out = new FileOutputStream("Saved_data.txt")) {
                 BufferedOutputStream bos = new BufferedOutputStream(out);
                 for (Person person : PersonHelper.getCollection()) {
@@ -29,12 +28,14 @@ public class Save extends Command {
             System.out.println("Коллекция сохранена в файл Saved_data.txt");
         }
     }
+
     @Override
-    public String getName(){
+    public String getName() {
         return "save";
     }
+
     @Override
-    public String getDescription(){
+    public String getDescription() {
         return ": сохранить коллекцию в файл";
     }
 }

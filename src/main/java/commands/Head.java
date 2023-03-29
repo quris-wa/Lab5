@@ -17,12 +17,14 @@ public class Head extends Command {
             }
         }
     }
+
     @Override
-    public String getName(){
+    public String getName() {
         return "head";
     }
+
     @Override
-    public String getDescription(){
+    public String getDescription() {
         return ": вывести первый элемент из коллекции";
     }
 }

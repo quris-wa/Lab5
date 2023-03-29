@@ -1,4 +1,5 @@
 package commands;
+
 import commandManagers.*;
 import personManagers.*;
 import userManagers.UserManager;
@@ -8,8 +9,7 @@ public class RemoveFirst extends Command {
     public void execute() {
         if (UserManager.getIsCommandArgument()) {
             System.out.println("У команды не должно быть аргумента!");
-        }
-        else {
+        } else {
             if (PersonHelper.getCollection().size() == 0) {
                 System.out.println("Коллекция пустая");
             } else {
@@ -18,12 +18,14 @@ public class RemoveFirst extends Command {
             }
         }
     }
+
     @Override
-    public String getName(){
+    public String getName() {
         return "remove_first";
     }
+
     @Override
-    public String getDescription(){
+    public String getDescription() {
         return ": удалить первый элемент из коллекции";
     }
 }

@@ -18,12 +18,14 @@ public class Clear extends Command {
             }
         }
     }
+
     @Override
-    public String getName(){
+    public String getName() {
         return "clear";
     }
+
     @Override
-    public String getDescription(){
+    public String getDescription() {
         return ": очистить коллекцию";
     }
 }

@@ -31,12 +31,14 @@ public class RemoveByPassportID extends Command {
             }
         }
     }
+
     @Override
-    public String getName(){
+    public String getName() {
         return "remove_any_by_passport_i_d";
     }
+
     @Override
-    public String getDescription(){
+    public String getDescription() {
         return ": удалить из коллекции один элемент, значение поля passportID которого эквивалентно заданному";
     }
 }

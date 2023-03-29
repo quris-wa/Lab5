@@ -3,6 +3,7 @@ package commands;
 import commandManagers.*;
 import personManagers.*;
 import userManagers.UserManager;
+
 import java.util.*;
 
 public class RemoveGreater extends Command {
@@ -23,12 +24,14 @@ public class RemoveGreater extends Command {
 
         }
     }
+
     @Override
-    public String getName(){
+    public String getName() {
         return "remove_greater";
     }
+
     @Override
-    public String getDescription(){
+    public String getDescription() {
         return ": удалить все элементы из коллекции, превышающие заданный";
     }
 }

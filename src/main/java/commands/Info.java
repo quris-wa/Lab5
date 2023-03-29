@@ -15,12 +15,14 @@ public class Info extends Command {
             System.out.println("Количество элементов: " + PersonHelper.getCollection().size());
         }
     }
+
     @Override
-    public String getName(){
+    public String getName() {
         return "info";
     }
+
     @Override
-    public String getDescription(){
+    public String getDescription() {
         return ": вывести в стандартный поток вывода информации о коллекции(тип, дата инициализации, количество элементов и т.д.)";
     }
 }

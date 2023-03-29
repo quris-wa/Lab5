@@ -37,22 +37,28 @@ public class UserManager {
             System.out.println("Такой команды нет!");
         }
     }
-    public static String getCommandArgument(){
+
+    public static String getCommandArgument() {
         return commandArgument;
     }
-    public static boolean getIsCommandArgument(){
+
+    public static boolean getIsCommandArgument() {
         return isCommandArgument;
     }
-    public static void setCommandArgument(String newCommandArgument){
+
+    public static void setCommandArgument(String newCommandArgument) {
         commandArgument = newCommandArgument;
     }
-    public static boolean getIsWorking(){
+
+    public static boolean getIsWorking() {
         return isWorking;
     }
-    public static void setIsWorking(boolean status){
+
+    public static void setIsWorking(boolean status) {
         isWorking = status;
     }
-    public static void setIsCommandArgument(boolean status){
+
+    public static void setIsCommandArgument(boolean status) {
         isCommandArgument = status;
     }
 }
