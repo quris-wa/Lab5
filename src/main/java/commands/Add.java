@@ -25,7 +25,6 @@ public class Add extends Command {
             }
             personParametrs[0] = namePerson;
 
-
             System.out.println("Введите координату X в типе данных Double(больше -866): ");
             String xStr = scanner.nextLine();
             while (!CheckCommand.checkValueX(xStr)) {
@@ -33,7 +32,6 @@ public class Add extends Command {
                 xStr = scanner.nextLine();
             }
             personParametrs[1] = xStr;
-
 
             System.out.println("Введите координату Y в типе данных Integer(больше -512): ");
             String yStr = scanner.nextLine();
@@ -51,7 +49,6 @@ public class Add extends Command {
                 heightStr = scanner.nextLine();
             }
             personParametrs[3] = heightStr;
-
 
             System.out.println("Введите дату рождения: ");
             String birthday = scanner.nextLine();

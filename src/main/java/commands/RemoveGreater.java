@@ -3,6 +3,7 @@ package commands;
 import commandManagers.*;
 import personManagers.*;
 import userManagers.UserManager;
+import java.util.*;
 
 public class RemoveGreater extends Command {
     @Override
@@ -14,9 +15,9 @@ public class RemoveGreater extends Command {
                 Double currentHeight = Double.parseDouble(UserManager.getCommandArgument());
                 PersonHelper.getCollection().removeIf(person -> (person.getHeight() > currentHeight));
                 System.out.println("Все люди, чей рост больше, чем " + UserManager.getCommandArgument() + " были удалены");
-            } catch (java.util.ConcurrentModificationException e) {
+            } catch (ConcurrentModificationException e) {
                 System.out.println("Удалена вся коллекция");
-            } catch (java.lang.NumberFormatException e) {
+            } catch (NumberFormatException e) {
                 System.out.println("Рост должен быть в формате Double!");
             }
 

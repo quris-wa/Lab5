@@ -31,7 +31,7 @@ public class UpdateByID extends Command {
                     Scanner scanner = new Scanner(System.in);
                     System.out.println("Введите имя: ");
                     String namePerson = scanner.nextLine();
-                    if (namePerson != null) person.changeName(namePerson);
+                    if (namePerson != null) person.setName(namePerson);
                     System.out.println("Введите координату X в типе данных Double(больше -866): ");
 
                     String xStr = scanner.nextLine();
@@ -39,7 +39,7 @@ public class UpdateByID extends Command {
                         System.out.println("Введите координату X в типе данных Double(больше -866): ");
                         xStr = scanner.nextLine();
                     }
-                    if (!xStr.equals("")) person.changeX(xStr);
+                    if (!xStr.equals("")) person.setX(xStr);
 
                     System.out.println("Введите координату Y в типе данных Integer(больше -512): ");
                     String yStr = scanner.nextLine();
@@ -47,7 +47,7 @@ public class UpdateByID extends Command {
                         System.out.println("Введите координату Y в типе данных Integer(больше -512): ");
                         yStr = scanner.nextLine();
                     }
-                    if (!yStr.equals("")) person.changeY(yStr);
+                    if (!yStr.equals("")) person.setY(yStr);
 
                     System.out.println("Введите рост в см(больше 0): ");
                     String heightStr = scanner.nextLine();
@@ -55,7 +55,7 @@ public class UpdateByID extends Command {
                         System.out.println("Введите рост в см(больше 0): ");
                         heightStr = scanner.nextLine();
                     }
-                    if (!heightStr.equals("")) person.changeHeight(heightStr);
+                    if (!heightStr.equals("")) person.setHeight(heightStr);
 
                     System.out.println("Введите дату рождения: ");
                     String birthday = scanner.nextLine();
@@ -63,7 +63,7 @@ public class UpdateByID extends Command {
                         System.out.println("Введите дату рождения: ");
                         birthday = scanner.nextLine();
                     }
-                    if (!birthday.equals("")) person.changeBirthday(birthday);
+                    if (!birthday.equals("")) person.setBirthday(birthday);
 
                     System.out.println("Введите ID паспорта: ");
                     String passportID = scanner.nextLine();
@@ -71,7 +71,7 @@ public class UpdateByID extends Command {
                         System.out.println("Введите ID паспорта: ");
                         passportID = scanner.nextLine();
                     }
-                    if (!passportID.equals("")) person.changePassportID(passportID);
+                    if (!passportID.equals("")) person.setPassportID(passportID);
 
                     System.out.println("Введите цвет глаз(BLACK, YELLOW, ORANGE): ");
                     String eyeColor = scanner.nextLine();
@@ -79,7 +79,7 @@ public class UpdateByID extends Command {
                         System.out.println("Введите цвет глаз(BLACK, YELLOW, ORANGE): ");
                         eyeColor = scanner.nextLine();
                     }
-                    if (!eyeColor.equals("")) person.changeEyeColor(eyeColor);
+                    if (!eyeColor.equals("")) person.setEyeColor(eyeColor);
 
                     System.out.println("Введите координату X локации:");
                     String xLocStr = scanner.nextLine();
@@ -87,7 +87,7 @@ public class UpdateByID extends Command {
                         System.out.println("Введите координату X локации:");
                         xLocStr = scanner.nextLine();
                     }
-                    if (!xLocStr.equals("")) person.changeLocX(xLocStr);
+                    if (!xLocStr.equals("")) person.setLocX(xLocStr);
 
                     System.out.println("Введите координату Y локации:");
                     String yLocStr = scanner.nextLine();
@@ -95,7 +95,7 @@ public class UpdateByID extends Command {
                         System.out.println("Введите координату Y локации:");
                         yLocStr = scanner.nextLine();
                     }
-                    if (!yLocStr.equals("")) person.changeLocY(yLocStr);
+                    if (!yLocStr.equals("")) person.setLocY(yLocStr);
 
                     System.out.println("Введите координату Z локации:");
                     String zLocStr = scanner.nextLine();
@@ -103,11 +103,11 @@ public class UpdateByID extends Command {
                         System.out.println("Введите координату Z локации:");
                         zLocStr = scanner.nextLine();
                     }
-                    if (!zLocStr.equals("")) person.changeLocZ(zLocStr);
+                    if (!zLocStr.equals("")) person.setLocZ(zLocStr);
 
                     System.out.println("Введите имя локации: ");
                     String nameLoc = scanner.nextLine();
-                    if (!nameLoc.equals("")) person.changeLocName(nameLoc);
+                    if (!nameLoc.equals("")) person.setLocName(nameLoc);
                     System.out.println("Значения данных человека с ID " + findId + " были обновлены");
                 }
             }
