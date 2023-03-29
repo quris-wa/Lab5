@@ -17,4 +17,8 @@ public class Exit extends Command {
     public String getName(){
         return "exit";
     }
+    @Override
+    public String getDescription(){
+        return ": завершить программу (без сохранения в файл)";
+    }
 }

@@ -22,4 +22,8 @@ public class RemoveFirst extends Command {
     public String getName(){
         return "remove_first";
     }
+    @Override
+    public String getDescription(){
+        return ": удалить первый элемент из коллекции";
+    }
 }

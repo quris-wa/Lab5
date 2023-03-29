@@ -24,4 +24,8 @@ public class Show extends Command {
     public String getName(){
         return "show";
     }
+    @Override
+    public String getDescription(){
+        return ": вывести в стандартный поток вывода все элементы коллекции в строковом представлении";
+    }
 }

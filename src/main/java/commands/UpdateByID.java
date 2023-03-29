@@ -111,7 +111,7 @@ public class UpdateByID extends Command {
                     System.out.println("Значения данных человека с ID " + findId + " были обновлены");
                 }
             }
-        } catch (java.lang.NumberFormatException e) {
+        } catch (NumberFormatException e) {
             System.out.println("Неверный формат ID!");
         }
     }
@@ -119,5 +119,8 @@ public class UpdateByID extends Command {
     public String getName(){
         return "update";
     }
-
+    @Override
+    public String getDescription(){
+        return ": обновить значение элемента коллекции, id которого равен заданному";
+    }
 }

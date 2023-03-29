@@ -31,4 +31,8 @@ public class MaxByBirthday extends Command {
     public String getName(){
         return "max_by_birthday";
     }
+    @Override
+    public String getDescription(){
+        return ": вывести любой объект из коллекции,значение поля birthday которого является максимальным";
+    }
 }

@@ -26,4 +26,8 @@ public class RemoveGreater extends Command {
     public String getName(){
         return "remove_greater";
     }
+    @Override
+    public String getDescription(){
+        return ": удалить все элементы из коллекции, превышающие заданный";
+    }
 }

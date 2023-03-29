@@ -113,8 +113,14 @@ public class Add extends Command {
             PersonHelper.getCollection().add(chelovek);
         }
     }
+
     @Override
-    public String getName(){
+    public String getName() {
         return "add";
+    }
+
+    @Override
+    public String getDescription() {
+        return ": добавить новый элемент в коллекцию";
     }
 }

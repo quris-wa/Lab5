@@ -19,6 +19,10 @@ public class Head extends Command {
     }
     @Override
     public String getName(){
-        return "exit";
+        return "head";
+    }
+    @Override
+    public String getDescription(){
+        return ": вывести первый элемент из коллекции";
     }
 }

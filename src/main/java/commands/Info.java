@@ -19,4 +19,8 @@ public class Info extends Command {
     public String getName(){
         return "info";
     }
+    @Override
+    public String getDescription(){
+        return ": вывести в стандартный поток вывода информации о коллекции(тип, дата инициализации, количество элементов и т.д.)";
+    }
 }

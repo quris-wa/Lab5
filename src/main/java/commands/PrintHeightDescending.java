@@ -29,4 +29,8 @@ public class PrintHeightDescending extends Command {
     public String getName(){
         return "print_field_descending_height";
     }
+    @Override
+    public String getDescription(){
+        return ": вывести значения поля height всех элементов в порядке убывания";
+    }
 }
