@@ -13,7 +13,7 @@ public class HeightManager {
             System.out.println("Введите рост в см(больше 0): ");
             heightStr = scanner.nextLine();
         }
-        person.setHeight(heightStr);
+        if(!heightStr.equals(""))person.setHeight(heightStr);
     }
 
     public static void updateHeight(Person person) {

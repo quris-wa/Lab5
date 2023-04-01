@@ -13,7 +13,7 @@ public class PassportIDManager {
             System.out.println("Введите ID паспорта: ");
             passportID = scanner.nextLine();
         }
-        person.setPassportID(passportID);
+        if(!passportID.equals(""))person.setPassportID(passportID);
     }
 
     public static void updatePassportID(Person person) {

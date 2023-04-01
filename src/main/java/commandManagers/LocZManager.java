@@ -13,7 +13,7 @@ public class LocZManager {
             System.out.println("Введите координату Z локации:");
             zLocStr = scanner.nextLine();
         }
-        person.setLocZ(zLocStr);
+        if(!zLocStr.equals(""))person.setLocZ(zLocStr);
     }
 
     public static void updateLocZ(Person person) {

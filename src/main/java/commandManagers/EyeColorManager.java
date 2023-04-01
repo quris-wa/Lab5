@@ -13,7 +13,7 @@ public class EyeColorManager {
             System.out.println("Введите цвет глаз(BLACK, YELLOW, ORANGE): ");
             eyeColor = scanner.nextLine();
         }
-        person.setEyeColor(eyeColor);
+        if(!eyeColor.equals(""))person.setEyeColor(eyeColor);
     }
 
     public static void updateEyeColor(Person person) {

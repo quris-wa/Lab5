@@ -16,6 +16,9 @@ public class Person implements Comparable {
     private Location location; //Поле может быть null
 
     public Person() {
+        Random randomID = new Random(new Date().getTime());
+        id = Math.abs(randomID.nextInt());
+        creationDate = new Date();
     }
 
     public Person(String[] str1) {
@@ -96,6 +99,7 @@ public class Person implements Comparable {
     }
 
     public void setX(String newX) {
+        if(coordinates == null)coordinates = new Coordinates(Double.parseDouble(newX), 0);
         coordinates = new Coordinates(Double.parseDouble(newX), coordinates.getY());
     }
 

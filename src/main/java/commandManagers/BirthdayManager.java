@@ -13,7 +13,7 @@ public class BirthdayManager {
             System.out.println("Введите дату рождения: ");
             birthday = scanner.nextLine();
         }
-        person.setBirthday(birthday);
+        if(!birthday.equals(""))person.setBirthday(birthday);
     }
 
     public static void updateBirthday(Person person) {

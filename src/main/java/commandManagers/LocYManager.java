@@ -13,7 +13,7 @@ public class LocYManager {
             System.out.println("Введите координату Y локации:");
             yLocStr = scanner.nextLine();
         }
-        person.setLocY(yLocStr);
+        if(!yLocStr.equals(""))person.setLocY(yLocStr);
     }
 
     public static void updateLocY(Person person) {

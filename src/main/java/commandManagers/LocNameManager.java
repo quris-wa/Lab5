@@ -9,7 +9,7 @@ public class LocNameManager {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Введите имя локации: ");
         String nameLoc = scanner.nextLine();
-        person.setLocName(nameLoc);
+        if(!nameLoc.equals(""))person.setLocName(nameLoc);
     }
 
     public static void updateLocName(Person person) {

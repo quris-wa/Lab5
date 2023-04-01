@@ -5,6 +5,7 @@ import collection.Person;
 import java.util.Scanner;
 
 public class LocXManager {
+    static boolean isXAdded = false;
     public static void addLocX(Person person) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Введите координату X локации:");
@@ -13,7 +14,10 @@ public class LocXManager {
             System.out.println("Введите координату X локации:");
             xLocStr = scanner.nextLine();
         }
-        person.setLocX(xLocStr);
+        if(!xLocStr.equals("")){
+            person.setLocX(xLocStr);
+            isXAdded = true;
+        }
     }
 
     public static void updateLocX(Person person) {
@@ -25,5 +29,8 @@ public class LocXManager {
             xLocStr = scanner.nextLine();
         }
         if (!xLocStr.equals("")) person.setLocX(xLocStr);
+    }
+    public static boolean getIsXAdded(){
+        return isXAdded;
     }
 }

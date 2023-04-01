@@ -22,13 +22,13 @@ public class Add extends Command {
             PassportIDManager.addPassportID(person);
             EyeColorManager.addEyeColor(person);
             LocXManager.addLocX(person);
-            LocYManager.addLocY(person);
-            if (!(person.getLocation().getX() == null)) {
+            if (LocXManager.getIsXAdded()) {
                 LocYManager.addLocY(person);
                 LocZManager.addLocZ(person);
-                LocNameManager.addLocName(person);
             }
+            LocNameManager.addLocName(person);
             PersonHelper.getCollection().add(person);
+            System.out.println("Человек добавлен в коллекцию!");
         }
     }
 
