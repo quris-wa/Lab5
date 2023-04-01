@@ -3,8 +3,8 @@ package commands;
 import java.util.*;
 import java.io.*;
 
-import commandManagers.*;
-import userManagers.*;
+import command_managers.*;
+import user_managers.*;
 
 public class ExecuteScript extends Command {
     String commandArgument;

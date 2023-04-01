@@ -1,7 +1,7 @@
 package commands;
 
-import commandManagers.*;
-import userManagers.UserManager;
+import command_managers.*;
+import user_managers.UserManager;
 
 import java.util.HashMap;
 import java.util.Map;

@@ -1,7 +1,7 @@
-package commandManagers;
+package command_managers;
 
 import collection.Color;
-import userManagers.UserManager;
+import user_managers.UserManager;
 
 import java.text.*;
 import java.util.Date;

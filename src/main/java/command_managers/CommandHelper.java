@@ -1,4 +1,4 @@
-package commandManagers;
+package command_managers;
 
 import commands.*;
 

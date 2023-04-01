@@ -1,7 +1,7 @@
 package commands;
 
-import commandManagers.*;
-import userManagers.*;
+import command_managers.*;
+import user_managers.*;
 
 public class Exit extends Command {
     @Override

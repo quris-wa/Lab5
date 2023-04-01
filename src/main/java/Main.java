@@ -1,6 +1,6 @@
 import collection.Person;
-import personManagers.PersonHelper;
-import userManagers.UserManager;
+import person_managers.PersonHelper;
+import user_managers.UserManager;
 
 import java.io.*;
 import java.util.*;

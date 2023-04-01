@@ -1,4 +1,4 @@
-package commandManagers;
+package command_managers;
 
 public abstract class Command implements CommandInterface {
     private String name;

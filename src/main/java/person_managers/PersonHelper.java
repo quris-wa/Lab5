@@ -1,4 +1,4 @@
-package personManagers;
+package person_managers;
 
 import collection.Person;
 

@@ -1,12 +1,9 @@
 package commands;
 
 import collection.Person;
-import commandManagers.*;
-import personManagers.*;
-import userManagers.UserManager;
-
-import javax.xml.stream.Location;
-import java.util.Scanner;
+import command_managers.*;
+import person_managers.*;
+import user_managers.UserManager;
 
 public class UpdateByID extends Command {
 
