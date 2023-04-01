@@ -9,7 +9,7 @@ public class CoorYManager {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Введите координату Y в типе данных Integer(больше -512): ");
         String yStr = scanner.nextLine();
-        while (!CheckCommand.checkValueY(yStr)) {
+        while (CheckCommand.checkValueY(yStr)) {
             System.out.println("Введите координату Y в типе данных Integer(больше -512): ");
             yStr = scanner.nextLine();
         }
@@ -20,7 +20,7 @@ public class CoorYManager {
         System.out.println("Введите координату Y в типе данных Integer(больше -512): ");
         Scanner scanner = new Scanner(System.in);
         String yStr = scanner.nextLine();
-        while (!yStr.equals("") && !CheckCommand.checkValueY(yStr)) {
+        while (!yStr.equals("") && CheckCommand.checkValueY(yStr)) {
             System.out.println("Введите координату Y в типе данных Integer(больше -512): ");
             yStr = scanner.nextLine();
         }

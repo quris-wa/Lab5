@@ -9,7 +9,7 @@ public class PassportIDManager {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Введите ID паспорта: ");
         String passportID = scanner.nextLine();
-        while (!CheckCommand.checkPassport(passportID)) {
+        while (CheckCommand.checkPassport(passportID)) {
             System.out.println("Введите ID паспорта: ");
             passportID = scanner.nextLine();
         }
@@ -20,7 +20,7 @@ public class PassportIDManager {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Введите ID паспорта: ");
         String passportID = scanner.nextLine();
-        while (!passportID.equals("") && !CheckCommand.checkPassport(passportID)) {
+        while (!passportID.equals("") && CheckCommand.checkPassport(passportID)) {
             System.out.println("Введите ID паспорта: ");
             passportID = scanner.nextLine();
         }

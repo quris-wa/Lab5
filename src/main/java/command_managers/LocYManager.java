@@ -9,7 +9,7 @@ public class LocYManager {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Введите координату Y локации:");
         String yLocStr = scanner.nextLine();
-        while (!CheckCommand.checkValueLocY(yLocStr)) {
+        while (CheckCommand.checkValueLocY(yLocStr)) {
             System.out.println("Введите координату Y локации:");
             yLocStr = scanner.nextLine();
         }
@@ -20,7 +20,7 @@ public class LocYManager {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Введите координату Y локации:");
         String yLocStr = scanner.nextLine();
-        while (!yLocStr.equals("") && !CheckCommand.checkValueLocY(yLocStr)) {
+        while (!yLocStr.equals("") && CheckCommand.checkValueLocY(yLocStr)) {
             System.out.println("Введите координату Y локации:");
             yLocStr = scanner.nextLine();
         }

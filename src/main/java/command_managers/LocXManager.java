@@ -10,7 +10,7 @@ public class LocXManager {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Введите координату X локации:");
         String xLocStr = scanner.nextLine();
-        while (!CheckCommand.checkValueLocX(xLocStr)) {
+        while (CheckCommand.checkValueLocX(xLocStr)) {
             System.out.println("Введите координату X локации:");
             xLocStr = scanner.nextLine();
         }
@@ -24,7 +24,7 @@ public class LocXManager {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Введите координату X локации:");
         String xLocStr = scanner.nextLine();
-        while (!xLocStr.equals("") && !CheckCommand.checkValueLocX(xLocStr)) {
+        while (!xLocStr.equals("") && CheckCommand.checkValueLocX(xLocStr)) {
             System.out.println("Введите координату X локации:");
             xLocStr = scanner.nextLine();
         }

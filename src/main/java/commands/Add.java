@@ -7,7 +7,6 @@ import user_managers.UserManager;
 
 
 public class Add extends Command {
-
     @Override
     public void execute() {
         if (UserManager.getIsCommandArgument()) {

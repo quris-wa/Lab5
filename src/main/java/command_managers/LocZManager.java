@@ -9,7 +9,7 @@ public class LocZManager {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Введите координату Z локации:");
         String zLocStr = scanner.nextLine();
-        while (!CheckCommand.checkValueLocZ(zLocStr)) {
+        while (CheckCommand.checkValueLocZ(zLocStr)) {
             System.out.println("Введите координату Z локации:");
             zLocStr = scanner.nextLine();
         }
@@ -20,7 +20,7 @@ public class LocZManager {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Введите координату Z локации:");
         String zLocStr = scanner.nextLine();
-        while (!zLocStr.equals("") && !CheckCommand.checkValueLocZ(zLocStr)) {
+        while (!zLocStr.equals("") && CheckCommand.checkValueLocZ(zLocStr)) {
             System.out.println("Введите координату Z локации:");
             zLocStr = scanner.nextLine();
         }

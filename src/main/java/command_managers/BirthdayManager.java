@@ -9,7 +9,7 @@ public class BirthdayManager {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Введите дату рождения: ");
         String birthday = scanner.nextLine();
-        while (!CheckCommand.checkDate(birthday)) {
+        while (CheckCommand.checkDate(birthday)) {
             System.out.println("Введите дату рождения: ");
             birthday = scanner.nextLine();
         }
@@ -20,7 +20,7 @@ public class BirthdayManager {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Введите дату рождения: ");
         String birthday = scanner.nextLine();
-        while (!birthday.equals("") && !CheckCommand.checkDate(birthday)) {
+        while (!birthday.equals("") && CheckCommand.checkDate(birthday)) {
             System.out.println("Введите дату рождения: ");
             birthday = scanner.nextLine();
         }

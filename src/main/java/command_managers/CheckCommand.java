@@ -18,122 +18,122 @@ public class CheckCommand {
     public static boolean checkValueX(String argument) {
         if (argument.equals("")) {
             System.out.println("Значение не должно быть пустым!");
-            return false;
+            return true;
         }
         try {
             Double doubleNum = Double.parseDouble(argument);
         } catch (NumberFormatException e) {
             System.out.println("Значение должно быть в типе данных Double");
-            return false;
+            return true;
         }
         if (Double.parseDouble(argument) <= -886) {
             System.out.println("Значение должно быть больше, чем -886");
-            return false;
-        } else return true;
+            return true;
+        } else return false;
     }
 
     public static boolean checkValueY(String argument) {
         if (argument.equals("")) {
             System.out.println("Значение не должно быть пустым!");
-            return false;
+            return true;
         }
         try {
             Integer integerNum = Integer.parseInt(argument);
         } catch (NumberFormatException e) {
             System.out.println("Значение должно быть в типе данных Integer");
-            return false;
+            return true;
         }
         if (Double.parseDouble(argument) <= -512) {
             System.out.println("Значение должно быть больше, чем -512");
-            return false;
-        } else return true;
+            return true;
+        } else return false;
     }
 
     public static boolean checkValueHeight(String argument) {
-        if (argument.equals("")) return true;
+        if (argument.equals("")) return false;
         try {
             Double doubleNum = Double.parseDouble(argument);
         } catch (NumberFormatException e) {
             System.out.println("Значение должно быть в типе данных Double");
-            return false;
+            return true;
         }
         if (Double.parseDouble(argument) <= 0) {
             System.out.println("Значение должно быть больше, чем 0");
-            return false;
-        } else return true;
+            return true;
+        } else return false;
     }
 
     public static boolean checkDate(String argument) {
-        if (argument.equals("")) return true;
+        if (argument.equals("")) return false;
         Date date;
         SimpleDateFormat df = new SimpleDateFormat("dd.mm.yyyy");
         date = df.parse(argument, new ParsePosition(0));
         if (date == null) {
             System.out.println("Дата должна быть в формате ДД.ММ.ГГГГ");
-            return false;
-        } else return true;
+            return true;
+        } else return false;
 
     }
 
     public static boolean checkPassport(String argument) {
-        if (argument.equals("")) return true;
+        if (argument.equals("")) return false;
         if (argument.length() > 26) {
             System.out.println("Длина ID паспорта не должна быть больше 26");
-            return false;
+            return true;
         } else if (argument.length() < 9) {
             System.out.println("Длина ID паспорта не должна быть меньше 9");
-            return false;
+            return true;
         }
-        return true;
+        return false;
     }
 
     public static boolean checkEyeColor(String argument) {
-        if (argument.equals("")) return true;
+        if (argument.equals("")) return false;
         try {
             Color.valueOf(argument);
-            return true;
+            return false;
         } catch (IllegalArgumentException e) {
             System.out.println("Цвет глаз должен соответсовать одному из значение: BLACK, YELLOW, ORANGE");
-            return false;
+            return true;
         }
     }
 
     public static boolean checkValueLocX(String argument) {
-        if (argument.equals("")) return true;
+        if (argument.equals("")) return false;
         try {
             Double doubleNum = Double.parseDouble(argument);
         } catch (NumberFormatException e) {
             System.out.println("Значение должно быть в типе данных Double");
-            return false;
+            return true;
         }
-        return true;
+        return false;
     }
 
     public static boolean checkValueLocY(String argument) {
         if (argument.equals("")) {
             System.out.println("Значение не должно быть пустым!");
-            return false;
+            return true;
         }
         try {
             Float floatNum = Float.parseFloat(argument);
         } catch (NumberFormatException e) {
             System.out.println("Значение должно быть в типе данных Float");
-            return false;
+            return true;
         }
-        return true;
+        return false;
     }
 
     public static boolean checkValueLocZ(String argument) {
         if (UserManager.getCommandArgument().equals("")) {
             System.out.println("Значение не должно быть пустым!");
-            return false;
+            return true;
         }
         try {
             Double doubleNum = Double.parseDouble(argument);
         } catch (NumberFormatException e) {
             System.out.println("Значение должно быть в типе данных Double");
-            return false;
+            return true;
         }
-        return true;
+        return false;
     }
 }

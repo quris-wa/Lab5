@@ -1,8 +1,8 @@
 package command_managers;
 
 public abstract class Command implements CommandInterface {
-    private String name;
-    private String description;
+    String name;
+    String description;
 
     public abstract void execute() throws Exception;
 

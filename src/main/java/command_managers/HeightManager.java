@@ -9,7 +9,7 @@ public class HeightManager {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Введите рост в см: ");
         String heightStr = scanner.nextLine();
-        while (!CheckCommand.checkValueHeight(heightStr)) {
+        while (CheckCommand.checkValueHeight(heightStr)) {
             System.out.println("Введите рост в см(больше 0): ");
             heightStr = scanner.nextLine();
         }
@@ -20,7 +20,7 @@ public class HeightManager {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Введите рост в см(больше 0): ");
         String heightStr = scanner.nextLine();
-        while (!heightStr.equals("") && !CheckCommand.checkValueHeight(heightStr)) {
+        while (!heightStr.equals("") && CheckCommand.checkValueHeight(heightStr)) {
             System.out.println("Введите рост в см(больше 0): ");
             heightStr = scanner.nextLine();
         }
