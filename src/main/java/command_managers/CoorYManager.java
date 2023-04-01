@@ -5,7 +5,7 @@ import collection.Person;
 import java.util.Scanner;
 
 public class CoorYManager {
-    public static void addCoorY(Person person) {
+    public static String readCoorY() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Введите координату Y в типе данных Integer(больше -512): ");
         String yStr = scanner.nextLine();
@@ -13,10 +13,10 @@ public class CoorYManager {
             System.out.println("Введите координату Y в типе данных Integer(больше -512): ");
             yStr = scanner.nextLine();
         }
-        person.setY(yStr);
+        return yStr;
     }
 
-    public static void updateCoorY(Person person) {
+    public static String readCoorYForUpdate() {
         System.out.println("Введите координату Y в типе данных Integer(больше -512): ");
         Scanner scanner = new Scanner(System.in);
         String yStr = scanner.nextLine();
@@ -24,6 +24,6 @@ public class CoorYManager {
             System.out.println("Введите координату Y в типе данных Integer(больше -512): ");
             yStr = scanner.nextLine();
         }
-        if (!yStr.equals("")) person.setY(yStr);
+        return yStr;
     }
 }

@@ -5,7 +5,7 @@ import collection.Person;
 import java.util.Scanner;
 
 public class LocYManager {
-    public static void addLocY(Person person) {
+    public static String readLocY() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Введите координату Y локации:");
         String yLocStr = scanner.nextLine();
@@ -13,10 +13,10 @@ public class LocYManager {
             System.out.println("Введите координату Y локации:");
             yLocStr = scanner.nextLine();
         }
-        if(!yLocStr.equals(""))person.setLocY(yLocStr);
+        return yLocStr;
     }
 
-    public static void updateLocY(Person person) {
+    public static String readLocYForUpdate() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Введите координату Y локации:");
         String yLocStr = scanner.nextLine();
@@ -24,6 +24,6 @@ public class LocYManager {
             System.out.println("Введите координату Y локации:");
             yLocStr = scanner.nextLine();
         }
-        if (!yLocStr.equals("")) person.setLocY(yLocStr);
+        return yLocStr;
     }
 }

@@ -1,11 +1,9 @@
 package command_managers;
 
-import collection.Person;
-
 import java.util.Scanner;
 
 public class HeightManager {
-    public static void addHeight(Person person) {
+    public static String readHeight() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Введите рост в см: ");
         String heightStr = scanner.nextLine();
@@ -13,10 +11,10 @@ public class HeightManager {
             System.out.println("Введите рост в см(больше 0): ");
             heightStr = scanner.nextLine();
         }
-        if(!heightStr.equals(""))person.setHeight(heightStr);
+        return heightStr;
     }
 
-    public static void updateHeight(Person person) {
+    public static String readHeightForUpdate() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Введите рост в см(больше 0): ");
         String heightStr = scanner.nextLine();
@@ -24,6 +22,6 @@ public class HeightManager {
             System.out.println("Введите рост в см(больше 0): ");
             heightStr = scanner.nextLine();
         }
-        if (!heightStr.equals("")) person.setHeight(heightStr);
+        return heightStr;
     }
 }

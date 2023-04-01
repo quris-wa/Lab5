@@ -99,7 +99,7 @@ public class Person implements Comparable {
     }
 
     public void setX(String newX) {
-        if(coordinates == null)coordinates = new Coordinates(Double.parseDouble(newX), 0);
+        if (coordinates == null) coordinates = new Coordinates(Double.parseDouble(newX), 0);
         coordinates = new Coordinates(Double.parseDouble(newX), coordinates.getY());
     }
 
@@ -108,7 +108,9 @@ public class Person implements Comparable {
     }
 
     public void setHeight(String newHeight) {
-        height = Double.parseDouble(newHeight);
+        if (!newHeight.equals("")) {
+            height = Double.parseDouble(newHeight);
+        }
     }
 
     public void setBirthday(String newBirthday) {
@@ -117,7 +119,7 @@ public class Person implements Comparable {
     }
 
     public void setPassportID(String newPassportID) {
-        passportID = newPassportID;
+        if (!newPassportID.equals("")) passportID = newPassportID;
     }
 
     public void setEyeColor(String newEyeColor) {

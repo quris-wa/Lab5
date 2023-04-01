@@ -5,7 +5,7 @@ import collection.Person;
 import java.util.Scanner;
 
 public class PassportIDManager {
-    public static void addPassportID(Person person) {
+    public static String readPassportID() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Введите ID паспорта: ");
         String passportID = scanner.nextLine();
@@ -13,10 +13,10 @@ public class PassportIDManager {
             System.out.println("Введите ID паспорта: ");
             passportID = scanner.nextLine();
         }
-        if(!passportID.equals(""))person.setPassportID(passportID);
+        return passportID;
     }
 
-    public static void updatePassportID(Person person) {
+    public static String readPassportIDForUpdate() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Введите ID паспорта: ");
         String passportID = scanner.nextLine();
@@ -24,6 +24,6 @@ public class PassportIDManager {
             System.out.println("Введите ID паспорта: ");
             passportID = scanner.nextLine();
         }
-        if (!passportID.equals("")) person.setPassportID(passportID);
+        return passportID;
     }
 }

@@ -5,7 +5,7 @@ import collection.Person;
 import java.util.Scanner;
 
 public class LocZManager {
-    public static void addLocZ(Person person) {
+    public static String readLocZ() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Введите координату Z локации:");
         String zLocStr = scanner.nextLine();
@@ -13,10 +13,10 @@ public class LocZManager {
             System.out.println("Введите координату Z локации:");
             zLocStr = scanner.nextLine();
         }
-        if(!zLocStr.equals(""))person.setLocZ(zLocStr);
+        return zLocStr;
     }
 
-    public static void updateLocZ(Person person) {
+    public static String readLocZForUpdate() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Введите координату Z локации:");
         String zLocStr = scanner.nextLine();
@@ -24,6 +24,6 @@ public class LocZManager {
             System.out.println("Введите координату Z локации:");
             zLocStr = scanner.nextLine();
         }
-        if (!zLocStr.equals("")) person.setLocZ(zLocStr);
+        return zLocStr;
     }
 }

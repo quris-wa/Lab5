@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 public class LocXManager {
     static boolean isXAdded = false;
-    public static void addLocX(Person person) {
+    public static String readLocX() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Введите координату X локации:");
         String xLocStr = scanner.nextLine();
@@ -15,12 +15,12 @@ public class LocXManager {
             xLocStr = scanner.nextLine();
         }
         if(!xLocStr.equals("")){
-            person.setLocX(xLocStr);
             isXAdded = true;
         }
+        return xLocStr;
     }
 
-    public static void updateLocX(Person person) {
+    public static String readLocXForUpdate() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Введите координату X локации:");
         String xLocStr = scanner.nextLine();
@@ -28,7 +28,7 @@ public class LocXManager {
             System.out.println("Введите координату X локации:");
             xLocStr = scanner.nextLine();
         }
-        if (!xLocStr.equals("")) person.setLocX(xLocStr);
+        return xLocStr;
     }
     public static boolean getIsXAdded(){
         return isXAdded;

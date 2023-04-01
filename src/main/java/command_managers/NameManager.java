@@ -1,11 +1,9 @@
 package command_managers;
 
-import collection.Person;
-
 import java.util.Scanner;
 
 public class NameManager {
-    public static void addName(Person person) {
+    public static String readName() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Введите имя: ");
         String namePerson = scanner.nextLine();
@@ -13,13 +11,12 @@ public class NameManager {
             System.out.println("Введите имя: ");
             namePerson = scanner.nextLine();
         }
-        person.setName(namePerson);
+        return namePerson;
     }
 
-    public static void updateName(Person person) {
+    public static String readNameForUpdate() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Введите имя: ");
-        String namePerson = scanner.nextLine();
-        if (namePerson != null) person.setName(namePerson);
+        return scanner.nextLine();
     }
 }

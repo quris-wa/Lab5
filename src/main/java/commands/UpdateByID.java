@@ -23,17 +23,39 @@ public class UpdateByID extends Command {
             if (!isFound) {
                 System.out.println("Такого ID не существует!");
             } else {
-                NameManager.updateName(person);
-                CoorXManager.updateCoorX(person);
-                CoorYManager.updateCoorY(person);
-                HeightManager.updateHeight(person);
-                BirthdayManager.updateBirthday(person);
-                PassportIDManager.updatePassportID(person);
-                EyeColorManager.updateEyeColor(person);
-                LocXManager.updateLocX(person);
-                LocYManager.updateLocY(person);
-                LocZManager.updateLocZ(person);
-                LocNameManager.updateLocName(person);
+                String namePerson = NameManager.readNameForUpdate();
+                if (namePerson != null) person.setName(namePerson);
+
+                String xStr = CoorXManager.readCoorXForUpdate();
+                if (!xStr.equals("")) person.setX(xStr);
+
+                String yStr = CoorYManager.readCoorYForUpdate();
+                if (!yStr.equals("")) person.setY(yStr);
+
+                String heightStr = HeightManager.readHeightForUpdate();
+                if (!heightStr.equals("")) person.setHeight(heightStr);
+
+                String birthday = BirthdayManager.readBirthdayForUpdate();
+                if (!birthday.equals("")) person.setBirthday(birthday);
+
+                String passportID = PassportIDManager.readPassportIDForUpdate();
+                if (!passportID.equals("")) person.setPassportID(passportID);
+
+                String eyeColor = EyeColorManager.readEyeColorForUpdate();
+                if (!eyeColor.equals("")) person.setEyeColor(eyeColor);
+
+                String xLocStr = LocXManager.readLocXForUpdate();
+                if (!xLocStr.equals("")) person.setLocX(xLocStr);
+
+                String yLocStr = LocYManager.readLocYForUpdate();
+                if (!yLocStr.equals("")) person.setLocY(yLocStr);
+
+                String zLocStr = LocZManager.readLocZForUpdate();
+                if (!zLocStr.equals("")) person.setLocZ(zLocStr);
+
+                String nameLoc = LocNameReader.readLocName();
+                if (!nameLoc.equals("")) person.setLocName(nameLoc);
+
                 System.out.println("Значения данных человека с ID " + findId + " были обновлены");
             }
         } catch (NumberFormatException e) {

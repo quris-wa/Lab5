@@ -7,26 +7,29 @@ import user_managers.UserManager;
 
 
 public class Add extends Command {
+    String[] personParameters = new String[12];
     @Override
     public void execute() {
         if (UserManager.getIsCommandArgument()) {
             System.out.println("У команды не должно быть аргумента!");
         } else {
-            Person person = new Person();
-            NameManager.addName(person);
-            CoorXManager.addCoorX(person);
-            CoorYManager.addCoorY(person);
-            HeightManager.addHeight(person);
-            BirthdayManager.addBirthday(person);
-            PassportIDManager.addPassportID(person);
-            EyeColorManager.addEyeColor(person);
-            LocXManager.addLocX(person);
+            personParameters[0] = NameManager.readName();
+            personParameters[1] = CoorXManager.readCoorX();
+            personParameters[2] = CoorYManager.readCoorY();
+            personParameters[3] = HeightManager.readHeight();
+            personParameters[4] = BirthdayManager.readBirthday();
+            personParameters[5] = PassportIDManager.readPassportID();
+            personParameters[6] = EyeColorManager.readEyeColor();
+            personParameters[7] = LocXManager.readLocX();
             if (LocXManager.getIsXAdded()) {
-                LocYManager.addLocY(person);
-                LocZManager.addLocZ(person);
+                personParameters[8] = LocYManager.readLocY();
+                personParameters[9] = LocZManager.readLocZ();
+                personParameters[10] = LocNameReader.readLocName();
+            } else {
+                for (int i = 8; i <= 10; i++) personParameters[i] = "";
             }
-            LocNameManager.addLocName(person);
-            PersonHelper.getCollection().add(person);
+            Person chelovek = new Person(personParameters);
+            PersonHelper.getCollection().add(chelovek);
             System.out.println("Человек добавлен в коллекцию!");
         }
     }

@@ -5,7 +5,7 @@ import collection.Person;
 import java.util.Scanner;
 
 public class BirthdayManager {
-    public static void addBirthday(Person person) {
+    public static String readBirthday() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Введите дату рождения: ");
         String birthday = scanner.nextLine();
@@ -13,10 +13,10 @@ public class BirthdayManager {
             System.out.println("Введите дату рождения: ");
             birthday = scanner.nextLine();
         }
-        if(!birthday.equals(""))person.setBirthday(birthday);
+        return birthday;
     }
 
-    public static void updateBirthday(Person person) {
+    public static String readBirthdayForUpdate() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Введите дату рождения: ");
         String birthday = scanner.nextLine();
@@ -24,6 +24,6 @@ public class BirthdayManager {
             System.out.println("Введите дату рождения: ");
             birthday = scanner.nextLine();
         }
-        if (!birthday.equals("")) person.setBirthday(birthday);
+        return birthday;
     }
 }

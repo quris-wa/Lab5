@@ -5,7 +5,7 @@ import collection.Person;
 import java.util.Scanner;
 
 public class CoorXManager {
-    public static void addCoorX(Person person) {
+    public static String readCoorX() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Введите координату X в типе данных Double(больше -866): ");
         String xStr = scanner.nextLine();
@@ -13,10 +13,10 @@ public class CoorXManager {
             System.out.println("Введите координату X в типе данных Double(больше -866): ");
             xStr = scanner.nextLine();
         }
-        person.setX(xStr);
+        return xStr;
     }
 
-    public static void updateCoorX(Person person) {
+    public static String readCoorXForUpdate() {
         System.out.println("Введите координату X в типе данных Double(больше -866): ");
         Scanner scanner = new Scanner(System.in);
         String xStr = scanner.nextLine();
@@ -24,6 +24,6 @@ public class CoorXManager {
             System.out.println("Введите координату X в типе данных Double(больше -866): ");
             xStr = scanner.nextLine();
         }
-        if (!xStr.equals("")) person.setX(xStr);
+        return xStr;
     }
 }
