@@ -52,6 +52,10 @@ public class Person implements Comparable {
         return passportID;
     }
 
+    public Location getLocation() {
+        return location;
+    }
+
     @Override
     public int compareTo(Object o) {
         return 0;
