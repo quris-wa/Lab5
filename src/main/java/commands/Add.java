@@ -5,10 +5,8 @@ import commandManagers.*;
 import personManagers.*;
 import userManagers.UserManager;
 
-import java.util.Scanner;
 
 public class Add extends Command {
-    String[] personParametrs = new String[12];
 
     @Override
     public void execute() {
