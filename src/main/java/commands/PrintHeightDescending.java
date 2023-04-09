@@ -7,7 +7,13 @@ import user_managers.UserManager;
 
 import java.util.*;
 
+/**
+ * Command to print the collection in descending order of height.
+ */
 public class PrintHeightDescending extends Command {
+    /**
+     * Prints the collection in descending order of height if command argument is not exist.
+     */
     @Override
     public void execute() {
         if (UserManager.getIsCommandArgument()) {

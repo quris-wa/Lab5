@@ -3,8 +3,13 @@ package commands;
 import command_managers.*;
 import person_managers.*;
 import user_managers.UserManager;
-
+/**
+ * Command to show information about the collection.
+ */
 public class Info extends Command {
+    /**
+     * Prints information about the collection if command argument is not exist.
+     */
     @Override
     public void execute() {
         if (UserManager.getIsCommandArgument()) {

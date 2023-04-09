@@ -3,7 +3,13 @@ package commands;
 import command_managers.*;
 import user_managers.*;
 
+/**
+ * Command to exit stop program.
+ */
 public class Exit extends Command {
+    /**
+     * Stops command if command argument is not exist.
+     */
     @Override
     public void execute() {
         if (UserManager.getIsCommandArgument()) {

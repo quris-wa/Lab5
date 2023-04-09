@@ -5,7 +5,9 @@ import person_managers.*;
 import user_managers.UserManager;
 
 import java.util.*;
-
+/**
+ * Command to remove all persons from the collection that exceed the specified height.
+ */
 public class RemoveGreater extends Command {
     @Override
     public void execute() {

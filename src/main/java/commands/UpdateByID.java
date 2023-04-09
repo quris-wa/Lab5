@@ -4,7 +4,9 @@ import collection.Person;
 import command_managers.*;
 import person_managers.*;
 import user_managers.UserManager;
-
+/**
+ * Command to update person from the collection by ID.
+ */
 public class UpdateByID extends Command {
 
     @Override
@@ -35,7 +37,7 @@ public class UpdateByID extends Command {
                 String heightStr = HeightManager.readHeightForUpdate();
                 if (!heightStr.equals("")) person.setHeight(heightStr);
 
-                String birthday = BirthdayManager.readBirthdayForUpdate();
+                String birthday = BirthdayManager.readBirthday();
                 if (!birthday.equals("")) person.setBirthday(birthday);
 
                 String passportID = PassportIDManager.readPassportIDForUpdate();

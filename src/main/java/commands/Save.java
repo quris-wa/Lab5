@@ -6,7 +6,9 @@ import person_managers.*;
 import user_managers.UserManager;
 
 import java.io.*;
-
+/**
+ * Command to save collection to the file.
+ */
 public class Save extends Command {
     @Override
     public void execute() throws IOException {

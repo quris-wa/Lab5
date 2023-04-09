@@ -5,10 +5,16 @@ import command_managers.*;
 import person_managers.*;
 import user_managers.UserManager;
 
+/**
+ * Command to remove person from the collection by ID.
+ */
 public class RemoveByID extends Command {
     private boolean isFound = false;
     private Person person = new Person();
 
+    /**
+     * Removes person from the collection by ID and checks if it is possible.
+     */
     @Override
     public void execute() {
         if (PersonHelper.getCollection().size() == 0) {

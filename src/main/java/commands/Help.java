@@ -5,8 +5,13 @@ import user_managers.UserManager;
 
 import java.util.HashMap;
 import java.util.Map;
-
+/**
+ * Command to show all commands and descriptions .
+ */
 public class Help extends Command {
+    /**
+     * Prints all commands and descriptions if command argument is not exist.
+     */
     @Override
     public void execute() {
         HashMap<String, Command> commandList = CommandHelper.getCommands();

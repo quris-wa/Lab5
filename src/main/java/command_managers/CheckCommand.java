@@ -1,10 +1,15 @@
 package command_managers;
 
 import collection.Color;
+import collection.Person;
 import user_managers.UserManager;
 
 import java.text.*;
+import java.time.format.DateTimeParseException;
 import java.util.Date;
+import java.time.*;
+
+import static java.time.LocalDateTime.parse;
 
 public class CheckCommand {
     public static boolean checkName(String argument) {
@@ -65,14 +70,15 @@ public class CheckCommand {
 
     public static boolean checkDate(String argument) {
         if (argument.equals("")) return false;
-        Date date;
-        SimpleDateFormat df = new SimpleDateFormat("dd.mm.yyyy");
-        date = df.parse(argument, new ParsePosition(0));
-        if (date == null) {
-            System.out.println("Дата должна быть в формате ДД.ММ.ГГГГ");
-            return true;
-        } else return false;
-
+        try {
+            LocalDateTime birthday = parse(argument);
+        }
+        catch (DateTimeParseException e){
+            System.out.println("Неверный формат даты рождения!");
+            BirthdayManager.readBirthday();
+            return false;
+        }
+        return true;
     }
 
     public static boolean checkPassport(String argument) {

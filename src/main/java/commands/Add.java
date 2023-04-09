@@ -5,9 +5,15 @@ import command_managers.*;
 import person_managers.*;
 import user_managers.UserManager;
 
-
+/**
+ * Command to add a new person to the collection.
+ */
 public class Add extends Command {
     String[] personParameters = new String[12];
+
+    /**
+     * Adds a new person to the collection if command argument is not exist.
+     */
     @Override
     public void execute() {
         if (UserManager.getIsCommandArgument()) {

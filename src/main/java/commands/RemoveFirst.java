@@ -3,7 +3,9 @@ package commands;
 import command_managers.*;
 import person_managers.*;
 import user_managers.UserManager;
-
+/**
+ * Command to remove first person from the collection.
+ */
 public class RemoveFirst extends Command {
     @Override
     public void execute() {

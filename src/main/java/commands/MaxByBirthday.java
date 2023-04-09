@@ -5,20 +5,25 @@ import command_managers.*;
 import person_managers.*;
 import user_managers.UserManager;
 
+import java.time.LocalDateTime;
 import java.util.*;
 
-
+/**
+ * Command to show person with max birthday from collection .
+ */
 public class MaxByBirthday extends Command {
-
+    /**
+     * Prints person with max birthday if command argument is not exist.
+     */
     @Override
     public void execute() {
         if (UserManager.getIsCommandArgument()) {
             System.out.println("У команды не должно быть аргумента!");
         } else {
-            Date maxBirthday = PersonHelper.getCollection().element().getBirthday();
+            LocalDateTime maxBirthday = PersonHelper.getCollection().element().getBirthday();
             Person chelovek = PersonHelper.getCollection().element();
             for (Person person : PersonHelper.getCollection()) {
-                if (person.getBirthday().after(maxBirthday)) {
+                if (person.getBirthday().isAfter(maxBirthday)) {
                     maxBirthday = person.getBirthday();
                     chelovek = person;
                 }

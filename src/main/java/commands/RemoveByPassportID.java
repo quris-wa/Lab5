@@ -5,10 +5,16 @@ import command_managers.*;
 import person_managers.*;
 import user_managers.UserManager;
 
+/**
+ * Command to remove person from the collection by passport ID.
+ */
 public class RemoveByPassportID extends Command {
     private boolean isFound = false;
     private Person person = new Person();
 
+    /**
+     * Removes person from the collection by passport ID and checks if it is possible.
+     */
     @Override
     public void execute() {
         if (PersonHelper.getCollection().size() == 0) {

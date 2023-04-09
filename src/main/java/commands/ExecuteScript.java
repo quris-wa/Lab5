@@ -6,9 +6,15 @@ import java.io.*;
 import command_managers.*;
 import user_managers.*;
 
+/**
+ * Command to execute script from file.
+ */
 public class ExecuteScript extends Command {
     String commandArgument;
 
+    /**
+     * Runs the script and stops the recursion if it finds it.
+     */
     @Override
     public void execute() throws Exception {
         try {

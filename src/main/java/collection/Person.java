@@ -1,16 +1,20 @@
 package collection;
 
-import java.text.*;
-import java.util.*;
+import command_managers.BirthdayManager;
 
+import java.time.format.*;
+import java.util.*;
+import java.time.*;
+
+import static java.time.LocalDateTime.parse;
 
 public class Person implements Comparable {
     private int id; //Значение поля должно быть больше 0, Значение этого поля должно быть уникальным, Значение этого поля должно генерироваться автоматически
     private String name; //Поле не может быть null, Строка не может быть пустой
     private Coordinates coordinates; //Поле не может быть null
-    private java.util.Date creationDate; //Поле не может быть null, Значение этого поля должно генерироваться автоматически
+    private Date creationDate; //Поле не может быть null, Значение этого поля должно генерироваться автоматически
     private Double height; //Поле может быть null, Значение поля должно быть больше 0
-    private java.util.Date birthday; //Поле может быть null
+    private LocalDateTime birthday; //Поле может быть null
     private String passportID; //Длина строки должна быть не меньше 9, Длина строки не должна быть больше 26, Поле может быть null
     private Color eyeColor; //Поле может быть null
     private Location location; //Поле может быть null
@@ -47,7 +51,7 @@ public class Person implements Comparable {
         return height;
     }
 
-    public Date getBirthday() {
+    public LocalDateTime getBirthday() {
         return birthday;
     }
 
@@ -114,8 +118,7 @@ public class Person implements Comparable {
     }
 
     public void setBirthday(String newBirthday) {
-        SimpleDateFormat df = new SimpleDateFormat("dd.MM.yyyy");
-        birthday = df.parse(newBirthday, new ParsePosition(0));
+        birthday = parse(newBirthday);
     }
 
     public void setPassportID(String newPassportID) {

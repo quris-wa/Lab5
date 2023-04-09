@@ -4,7 +4,13 @@ import command_managers.*;
 import person_managers.*;
 import user_managers.UserManager;
 
+/**
+ * Command to show first person in the collection.
+ */
 public class Head extends Command {
+    /**
+     * Prints first person in the collection if command argument is not exist.
+     */
     @Override
     public void execute() {
         if (UserManager.getIsCommandArgument()) {
