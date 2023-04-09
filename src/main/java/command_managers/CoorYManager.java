@@ -1,9 +1,10 @@
 package command_managers;
 
-import collection.Person;
-
 import java.util.Scanner;
 
+/**
+ * CoorYManager is a class for reading Y coordinate.
+ */
 public class CoorYManager {
     public static String readCoorY() {
         Scanner scanner = new Scanner(System.in);

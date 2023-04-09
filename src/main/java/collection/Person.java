@@ -1,8 +1,5 @@
 package collection;
 
-import command_managers.BirthdayManager;
-
-import java.time.format.*;
 import java.util.*;
 import java.time.*;
 
@@ -39,6 +36,11 @@ public class Person implements Comparable {
             location = new Location(Double.parseDouble(str1[7]), Float.parseFloat(str1[8]), Double.parseDouble(str1[9]), str1[10]);
     }
 
+    /**
+     * notNull checks if the argument is null
+     *
+     * @return is argument null
+     */
     public boolean notNull(String argument) {
         return !argument.equals("");
     }

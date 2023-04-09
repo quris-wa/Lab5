@@ -30,7 +30,7 @@ public class Add extends Command {
             if (LocXManager.getIsXAdded()) {
                 personParameters[8] = LocYManager.readLocY();
                 personParameters[9] = LocZManager.readLocZ();
-                personParameters[10] = LocNameReader.readLocName();
+                personParameters[10] = LocNameManager.readLocName();
             } else {
                 for (int i = 8; i <= 10; i++) personParameters[i] = "";
             }

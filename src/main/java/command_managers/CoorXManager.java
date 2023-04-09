@@ -1,9 +1,10 @@
 package command_managers;
 
-import collection.Person;
-
 import java.util.Scanner;
 
+/**
+ * CoorXManager is a class for reading X coordinate.
+ */
 public class CoorXManager {
     public static String readCoorX() {
         Scanner scanner = new Scanner(System.in);

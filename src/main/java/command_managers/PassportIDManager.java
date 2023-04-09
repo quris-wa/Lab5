@@ -1,9 +1,10 @@
 package command_managers;
 
-import collection.Person;
-
 import java.util.Scanner;
 
+/**
+ * PassportIDManager is a class for reading passport ID.
+ */
 public class PassportIDManager {
     public static String readPassportID() {
         Scanner scanner = new Scanner(System.in);

@@ -1,9 +1,10 @@
 package command_managers;
 
-import collection.Person;
-
 import java.util.Scanner;
 
+/**
+ * LocYManager is a class for reading Y coordinates of location.
+ */
 public class LocYManager {
     public static String readLocY() {
         Scanner scanner = new Scanner(System.in);

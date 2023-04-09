@@ -1,9 +1,10 @@
 package command_managers;
 
-import collection.Person;
-
 import java.util.Scanner;
 
+/**
+ * BirthdayManager is a class for reading birthday.
+ */
 public class BirthdayManager {
     public static String readBirthday() {
         Scanner scanner = new Scanner(System.in);

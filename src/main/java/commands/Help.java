@@ -5,6 +5,7 @@ import user_managers.UserManager;
 
 import java.util.HashMap;
 import java.util.Map;
+
 /**
  * Command to show all commands and descriptions .
  */

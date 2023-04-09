@@ -5,6 +5,9 @@ import user_managers.UserManager;
 import java.io.*;
 import java.util.*;
 
+/**
+ * Main is class for reading collection from file.
+ */
 public class Main {
     public static void main(String[] args) throws Exception {
         FileReader reader = new FileReader("src/main/java/Data.csv");

@@ -1,9 +1,10 @@
 package command_managers;
 
-import collection.Person;
-
 import java.util.Scanner;
 
+/**
+ * EyeColorManager is a class for reading eye color.
+ */
 public class EyeColorManager {
     public static String readEyeColor() {
         Scanner scanner = new Scanner(System.in);

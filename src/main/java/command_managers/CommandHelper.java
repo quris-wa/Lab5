@@ -6,6 +6,9 @@ import java.util.ArrayDeque;
 import java.util.Deque;
 import java.util.HashMap;
 
+/**
+ * CommandHelper is class for working with Hashmap of commands and putting command and their keys to Hashmap.
+ */
 public class CommandHelper {
     static private final HashMap<String, Command> commands = new HashMap<>();
     static private Deque<String> scriptsPath = new ArrayDeque<>();

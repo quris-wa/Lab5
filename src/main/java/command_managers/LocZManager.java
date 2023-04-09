@@ -1,9 +1,10 @@
 package command_managers;
 
-import collection.Person;
-
 import java.util.Scanner;
 
+/**
+ * LocZManager is a class for reading Z coordinates of location.
+ */
 public class LocZManager {
     public static String readLocZ() {
         Scanner scanner = new Scanner(System.in);

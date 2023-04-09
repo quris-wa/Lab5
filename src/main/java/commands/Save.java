@@ -6,12 +6,16 @@ import person_managers.*;
 import user_managers.UserManager;
 
 import java.io.*;
+
 /**
  * Command to save collection to the file.
  */
 public class Save extends Command {
+    /**
+     * Saves the collection to file if command argument is not exist.
+     */
     @Override
-    public void execute() throws IOException {
+    public void execute() {
         if (UserManager.getIsCommandArgument()) {
             System.out.println("У команды не должно быть аргумента!");
         } else {

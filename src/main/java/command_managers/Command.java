@@ -4,7 +4,10 @@ public abstract class Command implements CommandInterface {
     String name;
     String description;
 
-    public abstract void execute() throws Exception;
+    /**
+     * Executes a command.
+     */
+    public abstract void execute();
 
     public void setArgument(String argument) {
     }

@@ -4,10 +4,14 @@ import collection.Person;
 import command_managers.*;
 import person_managers.*;
 import user_managers.UserManager;
+
 /**
  * Command to print the collection.
  */
 public class Show extends Command {
+    /**
+     * Prints the collection if command argument is not exist.
+     */
     @Override
     public void execute() {
         if (UserManager.getIsCommandArgument()) {

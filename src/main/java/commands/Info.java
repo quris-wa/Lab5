@@ -3,6 +3,7 @@ package commands;
 import command_managers.*;
 import person_managers.*;
 import user_managers.UserManager;
+
 /**
  * Command to show information about the collection.
  */

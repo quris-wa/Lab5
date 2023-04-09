@@ -16,7 +16,7 @@ public class ExecuteScript extends Command {
      * Runs the script and stops the recursion if it finds it.
      */
     @Override
-    public void execute() throws Exception {
+    public void execute() {
         try {
             Deque<String> scriptsPathCopy;
             if (CommandHelper.getScriptsPath().contains(UserManager.getCommandArgument()) && getName().equals("execute_script")) {
@@ -47,7 +47,7 @@ public class ExecuteScript extends Command {
                 }
                 System.out.println("Скрипт " + scriptsPathCopy.pollLast() + " выполнен");
             }
-        } catch (java.io.FileNotFoundException e) {
+        } catch (FileNotFoundException e) {
             System.out.println("Файл с названием " + UserManager.getCommandArgument() + " не найден");
         }
     }

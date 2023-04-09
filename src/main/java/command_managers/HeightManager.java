@@ -2,6 +2,9 @@ package command_managers;
 
 import java.util.Scanner;
 
+/**
+ * HeightManager is a class for reading height.
+ */
 public class HeightManager {
     public static String readHeight() {
         Scanner scanner = new Scanner(System.in);

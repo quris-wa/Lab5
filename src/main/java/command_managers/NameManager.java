@@ -2,6 +2,9 @@ package command_managers;
 
 import java.util.Scanner;
 
+/**
+ * NameManager is a class for reading names.
+ */
 public class NameManager {
     public static String readName() {
         Scanner scanner = new Scanner(System.in);

@@ -6,12 +6,18 @@ import command_managers.CommandHelper;
 import java.util.HashMap;
 import java.util.*;
 
+/**
+ * UserManager is a class that is used to enter commands.
+ */
 public class UserManager {
     private static String commandArgument;
     private static boolean isWorking = true;
     static boolean isCommandArgument = false;
 
-    public static void scanCommand() throws Exception {
+    /**
+     * Scans command and execute it if it is possible.
+     */
+    public static void scanCommand() {
         HashMap<String, Command> commandList;
         commandList = CommandHelper.getCommands();
         Scanner scanner = new Scanner(System.in);

@@ -1,11 +1,13 @@
 package command_managers;
 
-import collection.Person;
-
 import java.util.Scanner;
 
+/**
+ * LocXManager is a class for reading X coordinates of location.
+ */
 public class LocXManager {
     static boolean isXAdded = false;
+
     public static String readLocX() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Введите координату X локации:");
@@ -14,7 +16,7 @@ public class LocXManager {
             System.out.println("Введите координату X локации:");
             xLocStr = scanner.nextLine();
         }
-        if(!xLocStr.equals("")){
+        if (!xLocStr.equals("")) {
             isXAdded = true;
         }
         return xLocStr;
@@ -30,7 +32,8 @@ public class LocXManager {
         }
         return xLocStr;
     }
-    public static boolean getIsXAdded(){
+
+    public static boolean getIsXAdded() {
         return isXAdded;
     }
 }

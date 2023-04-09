@@ -4,11 +4,14 @@ import collection.Person;
 import command_managers.*;
 import person_managers.*;
 import user_managers.UserManager;
+
 /**
  * Command to update person from the collection by ID.
  */
 public class UpdateByID extends Command {
-
+    /**
+     * Updates person fields from the collection and checks if it is possible.
+     */
     @Override
     public void execute() {
         try {
@@ -55,7 +58,7 @@ public class UpdateByID extends Command {
                 String zLocStr = LocZManager.readLocZForUpdate();
                 if (!zLocStr.equals("")) person.setLocZ(zLocStr);
 
-                String nameLoc = LocNameReader.readLocName();
+                String nameLoc = LocNameManager.readLocName();
                 if (!nameLoc.equals("")) person.setLocName(nameLoc);
 
                 System.out.println("Значения данных человека с ID " + findId + " были обновлены");
