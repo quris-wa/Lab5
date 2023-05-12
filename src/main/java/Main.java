@@ -9,8 +9,8 @@ import java.util.*;
  * Main is class for reading collection from file.
  */
 public class Main {
-    public static void main(String[] args) throws Exception {
-        FileReader reader = new FileReader("Data.csv");
+    public static void main(String[] args) {
+        BufferedReader reader = new BufferedReader(new InputStreamReader(Main.class.getClassLoader().getResourceAsStream("Data.csv")));
         Scanner scan = new Scanner(reader);
         String[] str;
         String S;
