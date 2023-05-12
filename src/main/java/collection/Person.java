@@ -1,5 +1,6 @@
 package collection;
 
+import java.time.format.DateTimeFormatter;
 import java.util.*;
 import java.time.*;
 
@@ -120,7 +121,11 @@ public class Person implements Comparable {
     }
 
     public void setBirthday(String newBirthday) {
-        birthday = parse(newBirthday);
+        if (!newBirthday.equals("")) {
+            DateTimeFormatter dateFormat = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
+            birthday = LocalDateTime.parse(newBirthday, dateFormat);
+            //birthday = parse(newBirthday);
+        }
     }
 
     public void setPassportID(String newPassportID) {

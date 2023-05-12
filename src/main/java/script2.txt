@@ -1,3 +1,0 @@
-show
-execute_script src/main/java/script3.txt
-info

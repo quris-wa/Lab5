@@ -1,2 +1,0 @@
-info
-execute_script src/main/java/script2.txt
